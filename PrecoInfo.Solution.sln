@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecoInfo.Domain", "PrecoInfo.Domain\PrecoInfo.Domain.csproj", "{CDFA91E3-BBAA-4603-A878-1428D5943787}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecoInfo.InfraStructure", "PrecoInfo.InfraStructure\PrecoInfo.InfraStructure.csproj", "{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC93DFE3-6227-4E26-9B8F-86D1EDFD132F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,10 @@ Global
 		{CDFA91E3-BBAA-4603-A878-1428D5943787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDFA91E3-BBAA-4603-A878-1428D5943787}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDFA91E3-BBAA-4603-A878-1428D5943787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

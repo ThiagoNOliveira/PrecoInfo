@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF51E4A6-C03F-4247-81ED-B1A10A726D1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrecoInfo.InfraStructure</RootNamespace>
+    <AssemblyName>PrecoInfo.InfraStructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Library\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\Library\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\Library\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Library\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\Library\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.1.2\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp.Laos, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\PostSharp.Laos.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logging\EstrategiaDeLogParaDiferentesAmbientes.cs" />
+    <Compile Include="Logging\ILogManager.cs" />
+    <Compile Include="Logging\LogEmDesenvolvimento.cs" />
+    <Compile Include="Logging\LogEmProducao.cs" />
+    <Compile Include="Logging\LogEmTestes.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Persistence\SessionConfiguration\ConfigurationFactory.cs" />
+    <Compile Include="Persistence\SessionConfiguration\IConfigurationFactory.cs" />
+    <Compile Include="Persistence\SessionManagement\FullSessionState.cs" />
+    <Compile Include="Persistence\SessionManagement\Interfaces\ISessionBuilder.cs" />
+    <Compile Include="Persistence\SessionManagement\Interfaces\ISessionFactoryBuilder.cs" />
+    <Compile Include="Persistence\SessionManagement\SessionBuilder.cs" />
+    <Compile Include="Persistence\SessionManagement\SessionFactoryBuilder.cs" />
+    <Compile Include="Persistence\TransactionManagment\ITransactionManager.cs" />
+    <Compile Include="Persistence\TransactionManagment\TransactionalAttribute.cs" />
+    <Compile Include="Persistence\TransactionManagment\TransactionManagerFluent.cs" />
+    <Compile Include="Persistence\TransactionManagment\TransactionModeEnum.cs" />
+    <Compile Include="Persistence\UnitOfWorkComponent\IUnitOfWork.cs" />
+    <Compile Include="Persistence\UnitOfWorkComponent\UnitOfWork.cs" />
+    <Compile Include="Persistence\UnitOfWorkComponent\UnitOfWorkFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScopeInstance\HttpInstanceScope.cs" />
+    <Compile Include="ScopeInstance\HybridInstanceScoper.cs" />
+    <Compile Include="ScopeInstance\IInstanceScoper.cs" />
+    <Compile Include="ScopeInstance\InstanceScoperBase.cs" />
+    <Compile Include="ScopeInstance\SingletonInstanceScoper.cs" />
+    <Compile Include="ScopeInstance\ThreadStaticInstanceScoper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)PrecoInfo.InfraStructure.dll" "$(ProjectDir)..\Library\PrecoInfo.InfraStructure.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
