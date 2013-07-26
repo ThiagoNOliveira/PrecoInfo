@@ -9,9 +9,15 @@
     <title>Error</title>
 </head>
 <body>
-    <hgroup>
-        <h1>Error.</h1>
-        <h2>An error occurred while processing your request.</h2>
-    </hgroup>
+<?php header($header); ?>
+	<div id="container-narrow" style="text-align: center;">
+		<hr />
+		<div>
+			<h1><?=$erro?></h1>
+			<h4><?=$mensagem?></h4>
+			<p><a href="<?=base_url()?>"><i class="icon-home"></i>&nbsp;Clique Aqui para voltar para a página inicial</a></p>
+		</div>
+		<hr />
+	</div>
 </body>
 </html>

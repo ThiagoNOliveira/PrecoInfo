@@ -35,7 +35,7 @@ header { min-height: 220px; color: #29313b; background: rgb(237,237,237); /* Old
 .navbar-search .input-append .inputPesquisar { border-right: 0; }
 
 /* Form Contato */
-#btnContato { position: fixed; left: -6px; margin: 0; padding: 0; height: 122px; width: 46px; /* border: 1px solid #225584; */ -moz-border-radius: 6px; -webkit-border-radius: 6px; -khtml-border-radius: 6px; border-radius: 6px; background: #333 url("../ico/contato.png") no-repeat center; z-index: 1; }
+#btnContato { position: fixed; left: -6px; margin: 0; padding: 0; height: 122px; width: 46px; /* border: 1px solid #225584; */ -moz-border-radius: 6px; -webkit-border-radius: 6px; -khtml-border-radius: 6px; border-radius: 6px; background: #333 url("ico/contato.png") no-repeat center; z-index: 1; }
 #divContato { display: none; position: fixed; width: 400px; height: 500px; margin-left: 32px; /*border: 1px solid #225584;*/ -moz-border-radius: 6px; -webkit-border-radius: 6px; -khtml-border-radius: 6px; border-radius: 6px; background: #333; z-index: 10; color: #f6f6f6; }
 
 #conteudo { /* min-height: 565px; */ min-height: 250px; padding-bottom: 40px; }

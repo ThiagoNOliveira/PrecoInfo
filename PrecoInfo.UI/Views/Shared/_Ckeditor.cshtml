@@ -1,0 +1,10 @@
+﻿<div class="container-narrow">
+	<form action="<?=base_url('ckeditor/enviar')?>" method="post">
+		<textarea name="texto" id="content" ><?=($texto)?$texto:''?></textarea>
+		<?php echo display_ckeditor($ckeditor); ?>
+		<br />
+		<input type="text" name="slug" placeholder="slug" value="<?=($slug)?$slug:''?>">
+		<br /><br />
+		<button type="submit" class="btn btn-success">Enviar</button>
+	</form>
+</div>
