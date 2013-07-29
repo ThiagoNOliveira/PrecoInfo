@@ -3,18 +3,6 @@
 	else $extensao = 'svg';
 	if($this->uri->segment(1) == 'categorias' || !$this->uri->segment(1)) $pesquisar = 'produtos';
 	else $pesquisar = 'produtos';
-	
-	/* FORECAST */
-	$this->load->helper('xml');
-	$xml = file_get_contents("http://api.openweathermap.org/data/2.5/weather?id=3448439&mode=xml&lang=pt&units=metric");
-	$forecast = xmlstr_to_array($xml);
-	$clima = $forecast['weather']['@attributes']['value'];
-	$clima_cod = $forecast['weather']['@attributes']['number'];
-	$clima_ico = $forecast['weather']['@attributes']['icon'];
-	$temp_atual = intval($forecast['temperature']['@attributes']['value']);
-	$temp_min = intval($forecast['temperature']['@attributes']['min']);
-	$temp_max =intval( $forecast['temperature']['@attributes']['max']); 
-	/* /FORECAST */
 ?>*@
 
 <header>

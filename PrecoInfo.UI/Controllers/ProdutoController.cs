@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace PrecoInfo.UI.Controllers
 {
-    public class HomeController : Controller
+    public class ProdutoController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Produto/
+
         public ActionResult Index()
         {
             return View();

@@ -11,14 +11,14 @@
 	<![endif]-->
     <!--[if IE]>
 		<script type="text/javascript">
-			document.createElement("article");
-			document.createElement("nav");
-			document.createElement("section");
-			document.createElement("header");
-			document.createElement("aside");
-			document.createElement("figure");
-			document.createElement("legend");
-			document.createElement("footer");
+		    document.createElement("article");
+		    document.createElement("nav");
+		    document.createElement("section");
+		    document.createElement("header");
+		    document.createElement("aside");
+		    document.createElement("figure");
+		    document.createElement("legend");
+		    document.createElement("footer");
 		</script>
 	<![endif] -->
 
@@ -80,6 +80,15 @@
 	
     <?php /* FUNÇÕES DO BOOTSTRAP */ ?>*@
 
+    <script type="text/javascript">
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=3448439&lang=pt&units=metric', function (data) {
+            debugger
+            $.each(data, function (index, element) {
+                alert(element.TotalClass);
+            });
+        });
+    </script>
+
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $("[title]").tooltip({ placement: 'bottom' });
@@ -90,7 +99,7 @@
                 return false;
             });
         });
-	</script>
+    </script>
     @*	<?php include("login_form.php"); ?>
 	<?php if(isset($_GET['login']) || $this->session->flashdata('box')): ?>
 		<script>
