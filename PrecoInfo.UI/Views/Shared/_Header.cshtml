@@ -9,55 +9,63 @@
     <section id="top-um" class="navbar navbar-inverse">
         <div class="navbar-inner">
             <div class="container-fluid">
-                @*<div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" title="<?=$clima?>">*@
-                @*<small class="muted">min <?=$temp_min?>&deg;/ máx <?=$temp_max?>&deg;</small>&nbsp;&nbsp;*@
+                <div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" @*title="<?=$clima?>"*@>
+                    <small class="muted">min @*<?=$temp_min?>*@&deg;/ máx @*<?=$temp_max?>*@&deg;</small>&nbsp;&nbsp;
                 @*<img src="<?=base_url('assets/ico/forecast/'.$clima_ico.'.png')?>" style="width: 20px;">*@
-                @*<strong><?=$temp_atual?>&deg;</strong>&nbsp;&nbsp;*@
-                <span style="color: #5B87C3;">SÃO PAULO</span>
-            </div>
-            <div class="pull-right">
-                <ul class="nav hidden-phone" role="navigation">
-                    @*<li><a href="<?=base_url('/termos-de-uso')?>" rel="bookmark">Termos de Uso</a></li>*@
-                    <li class="divider-vertical"></li>
-                    <li class="dropdown">
-                        @*<a href="<?=base_url('/atendimento')?>" rel="bookmark" class="dropdown-toggle" role="button" data-toggle="dropdown">Lojista </a>*@
-                        <ul class="dropdown-menu" role="menu">
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/duvidas-frequentes')?>" rel="bookmark">Aumente suas vendas</a></li>*@
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/como-funciona')?>" rel="bookmark">Cadastramos seu produtos</a></li>*@
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/nao-encontrou')?>" rel="bookmark">Dúvidas frequentes</a></li>*@
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/fale-conosco')?>" rel="bookmark">Nossos planos</a></li>*@
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/fale-conosco')?>" rel="bookmark">Porque anunciar no PreçoInfo</a></li>*@
-                            @*<li role="presentation"><a role="menuitem" href="<?=base_url('/fale-conosco')?>" rel="bookmark">QuickCadastro</a></li>*@
-                        </ul>
-                    </li>
-                    <li class="divider-vertical"></li>
-                    @*	<?php if($this->auth->esta_logado()): ?>
-								<li>
-									<a href="<?=base_url('painel')?>" title="acesse o Meu PreçoInfo"><i class="icon-user icon-white"></i><?=$this->auth->get_usuario()?></a>
-								</li>
-								<li class="divider-vertical"></li>
-								<li><a href="<?=base_url('/logout').'?redir='.current_url()?>" rel="nofollow"><i class="icon-signout icon-white"></i>&nbsp;&nbsp;Sair</a></li>
-							<?php else: ?>
-								<li><a href="<?=base_url('/cadastro')?>" rel="bookmark">Cadastre-se</a></li>
-								<li class="divider-vertical"></li>
-								<li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
-							<?php endif; ?>*@
+                    @*<strong><?=$temp_atual?>&deg;</strong>&nbsp;&nbsp;*@
+                    <span style="color: #5B87C3;">SÃO PAULO</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="nav hidden-phone" role="navigation">
+                        <li><a @*href="<?=base_url('/termos-de-uso')?>"*@ rel="bookmark">Termos de Uso</a></li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a @*href="<?=base_url('/atendimento')?>"*@ rel="bookmark" class="dropdown-toggle" role="button" data-toggle="dropdown">Lojista </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/duvidas-frequentes')?>"*@ rel="bookmark">Aumente suas vendas</a></li>
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/como-funciona')?>"*@ rel="bookmark">Cadastramos seu produtos</a></li>
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/nao-encontrou')?>"*@ rel="bookmark">Dúvidas frequentes</a></li>
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/fale-conosco')?>"*@ rel="bookmark">Nossos planos</a></li>
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/fale-conosco')?>" *@rel="bookmark">Porque anunciar no PreçoInfo</a></li>
+                                <li role="presentation"><a role="menuitem" @*href="<?=base_url('/fale-conosco')?>" *@rel="bookmark">QuickCadastro</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        @if (Session["Usuario"] == null)
+                        {
+                            <li><a @*href="<?=base_url('/cadastro')?>"*@ rel="bookmark">Cadastre-se</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a @*href="<?=base_url('painel')?>"*@ title="acesse o Meu PreçoInfo"><i class="icon-user icon-white"></i>@*<?=$this->auth->get_usuario()?>*@</a>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li><a @*href="<?=base_url('/logout').'?redir='.current_url()?>"*@ rel="nofollow"><i class="icon-signout icon-white"></i>&nbsp;&nbsp;Sair</a></li>        
+                        }
+                    </ul>
+                </div>
+                <ul class="nav visible-phone">
+                    @* todo: Alterar para view data *@
+                    @if (Session["Usuario"] == null)
+                    {
+                        <li><a @*href="<?=base_url('/cadastro')?>"*@ rel="bookmark">Cadastre-se</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
+                    }
+                    else
+                    {
+                        <li style="max-width: 60%; text-align: right;">
+                            <a><i class="icon-user icon-white"></i>&nbsp;
+                            <span class="muted">@*<?=$this->auth->get_usuario('nome')?>*@</span> Minha Conta</a>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li><a @*href="<?=base_url('/logout').'?redir='.current_url()?>"*@ rel="nofollow"><i class="icon-signout icon-white"></i>&nbsp;&nbsp;Sair</a></li>
+                    }
                 </ul>
             </div>
-            <ul class="nav visible-phone">
-                @*<?php if($this->auth->esta_logado()): ?>
-							<li style="max-width: 60%;text-align: right;">
-								<a><i class="icon-user icon-white"></i>&nbsp;
-								<span class="muted"><?=$this->auth->get_usuario('nome')?></span> Minha Conta</a>
-							</li>
-							<li class="divider-vertical"></li>
-							<li><a href="<?=base_url('/logout').'?redir='.current_url()?>" rel="nofollow"><i class="icon-signout icon-white"></i>&nbsp;&nbsp;Sair</a></li>
-						<?php else: ?>
-							<li><a href="<?=base_url('/cadastro')?>" rel="bookmark">Cadastre-se</a></li>
-							<li class="divider-vertical"></li>
-							<li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
-						<?php endif; ?>*@
-            </ul>
         </div>
     </section>
     <section id="top-dois" class="row">
@@ -87,19 +95,19 @@
                     </a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            @* <li <?=($this->uri->segment(1)=='pesquisa-de-precos') ? 'class="active"' : ''?>>
-							    <a href="<?=base_url('/pesquisa-de-precos')?>" title="pesquisa de preços" rel="bookmark">PESQUISA DE PREÇOS</a>
-							  </li>*@
+                            <li@* <?=($this->uri->segment(1)=='pesquisa-de-precos') ? 'class="active"' : ''?>*@>
+                                <a @*href="<?=base_url('/pesquisa-de-precos')?>"*@ title="pesquisa de preços" rel="bookmark">PESQUISA DE PREÇOS</a>
+                            </li>
                             <li class="divider-vertical"></li>
-                            @*<li <?=($this->uri->segment(1)=='servicos') ? 'class="active"' : ''?>><a href="<?=base_url('/servicos')?>" title="prestadores de serviço" rel="bookmark">SERVIÇOS</a></li>*@
+                            <li @*<?=($this->uri->segment(1)=='servicos') ? 'class="active"' : ''?>*@><a @*href="<?=base_url('/servicos')?>"*@ title="prestadores de serviço" rel="bookmark">SERVIÇOS</a></li>
                             <li class="divider-vertical"></li>
-                            @*<li <?=($this->uri->segment(1)=='usados') ? 'class="active"' : ''?>><a href="<?=base_url('/classificados')?>" title="classificados / usados">CLASSIFICADOS</a></li>*@
+                            <li @*<?=($this->uri->segment(1)=='usados') ? 'class="active"' : ''?>*@><a @*href="<?=base_url('/classificados')?>"*@ title="classificados / usados">CLASSIFICADOS</a></li>
                             <li class="divider-vertical"></li>
-                            @*<li <?=($this->uri->segment(1)=='brindes') ? 'class="active"' : ''?>><a href="<?=base_url('/brindes')?>" title="distribuição de brindes" rel="bookmark">BRINDES</a></li>*@
+                            <li @*<?=($this->uri->segment(1)=='brindes') ? 'class="active"' : ''?>*@><a @*href="<?=base_url('/brindes')?>"*@ title="distribuição de brindes" rel="bookmark">BRINDES</a></li>
                         </ul>
                         <form class="navbar-search pull-right">
                             <div class="input-append">
-                                @*<input type="text" class="input-large inputPesquisar" placeholder="Pesquise <?=$pesquisar?>">*@
+                                <input type="text" class="input-large inputPesquisar" @*placeholder="Pesquise <?=$pesquisar?>"*@>
                                 <span class="add-on"><i class="icon-search"></i></span>
                             </div>
                         </form>
