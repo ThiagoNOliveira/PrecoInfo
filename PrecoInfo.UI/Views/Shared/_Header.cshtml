@@ -33,7 +33,7 @@
                         <li class="divider-vertical"></li>
                         @if (Session["Usuario"] == null)
                         {
-                            <li><a @*href="<?=base_url('/cadastro')?>"*@ rel="bookmark">Cadastre-se</a></li>
+                            <li><a href="../Usuario" rel="bookmark">Cadastre-se</a></li>
                             <li class="divider-vertical"></li>
                             <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
                         }
@@ -51,7 +51,7 @@
                     @* todo: Alterar para view data *@
                     @if (Session["Usuario"] == null)
                     {
-                        <li><a @*href="<?=base_url('/cadastro')?>"*@ rel="bookmark">Cadastre-se</a></li>
+                        <li><a href="@Html.ActionLink("Cadastro","Index","Usuario")" rel="bookmark">Cadastre-se</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
                     }

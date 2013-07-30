@@ -1,0 +1,32 @@
+﻿<?php if(isset($sucesso) && $sucesso === TRUE): ?>
+	<?php if($key == 'cadastrado'): ?>
+		<?php if($tipo == 'comum'): ?>
+			<div class="container-narrow">
+				<h1>Obrigado!</h1>
+				<h2 class="muted">Seu cadastro foi processado com sucesso.</h2>
+				<p class="lead">Você receberá um Email no endereço de cadastro contendo um link para ativação da sua conta.</p>
+				<p>Caso enfrente qualquer dificuldade, n&atilde;o hesite em contatar nosso <big><a href="<?=base_url('atendimento')?>">Atendimento</a></big>.<span style="line-height: 1.6em;">&nbsp;O Pre&ccedil;oInfo agradece por sua parceria.</span></p>
+			</div>
+		<?php elseif($tipo == 'comercial'): ?>
+			<div class="container-narrow">
+				<h1>Obrigado!</h1>
+				<h2 class="muted">Seu cadastro foi processado com sucesso.</h2>
+				<p class="lead">Por favor, aguarde 48 horas. Seu formulário passará por análise da administração e você receberá um Email no endereço de cadastro informando que sua conta foi ativada.</p>
+				<p>Caso enfrente qualquer dificuldade, n&atilde;o hesite em contatar nosso <big><a href="<?=base_url('atendimento')?>">Atendimento</a></big>.<span style="line-height: 1.6em;">&nbsp;O Pre&ccedil;oInfo agradece por sua parceria.</span></p>
+			</div>
+		<?php endif; ?>
+	<?php elseif($key == 'ativado'): ?>
+			<div class="container-narrow">
+				<h1>Obrigado!</h1>
+				<h2 class="muted">Seu cadastro foi ativado!</h2>
+				<p class="lead">Você já pode utilizar os serviços exclusivos para cadastrados oferecidos pelo PreçoInfo.</p>
+				<p>Caso enfrente qualquer dificuldade, n&atilde;o hesite em contatar nosso <big><a href="<?=base_url('atendimento')?>">Atendimento</a></big>.<span style="line-height: 1.6em;">&nbsp;O Pre&ccedil;oInfo agradece por sua parceria.</span></p>
+			</div>
+	<?php endif; ?>
+<?php else: ?>
+			<div class="container-narrow">
+				<h1>Desculpe!</h1>
+				<h2 class="muted">Houve um problema no processamento da sua requisição. Por favor, tente novamente mais tarde</h2>
+				<p>Caso enfrente qualquer dificuldade, n&atilde;o hesite em contatar nosso <big><a href="<?=base_url('atendimento')?>">Atendimento</a></big>.<span style="line-height: 1.6em;">&nbsp;O Pre&ccedil;oInfo agradece por sua parceria.</span></p>
+			</div>
+<?php endif; ?>

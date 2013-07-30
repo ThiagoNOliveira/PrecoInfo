@@ -1,0 +1,165 @@
+﻿<div class="container-narrow">
+	<?=validation_errors('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">&times;</button>', '</div>')?>
+	<form class="form-horizontal" id="cadastro" method="post">
+		<fieldset>
+		  <legend>Usuário, cadastre-se Grátis</legend>
+		  <div class="control-group">
+		    <label class="control-label" for="inputNome">Nome</label>
+		    <div class="controls">
+		      <input type="text" id="inputNome" placeholder="Nome" name="nome" value="<?=set_value('nome')?>" required> *
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Email</label>
+		    <div class="controls">
+		      <input type="email" id="inputEmail" placeholder="Email" name="email" value="<?=set_value('email')?>" required> *
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputPassword">Senha</label>
+		    <div class="controls">
+		      <input type="password" id="inputPassword" placeholder="Senha" name="senha" required> *
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputPassword2">Repita sua Senha</label>
+		    <div class="controls">
+		      <input type="password" id="inputPassword2" placeholder="Repita sua Senha" name="validarsenha" required> *
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputCel">Telefone Celular</label>
+		    <div class="controls">
+		      <input type="tel" id="inputCel" placeholder="Telefone Celular" name="celular" value="<?=set_value('celular')?>">
+		      <i class="icon-info-sign" title="envie seus produtos favoritos por SMS gratuitamente"></i>
+		    </div>
+		  </div>
+		  
+		  <!--
+		  <h4 style="margin-top: 40px;">Complete o cadastro, siga nossa página no Facebook e <span class="text-info">GANHE UM BRINDE EXCLUSIVO</span></h4>
+		  <!-- cadastro opcional --><!--
+		  <div class="control-group">
+		    <label class="control-label" for="inputCep">CEP</label>
+		    <div class="controls">
+		      <input type="text" id="inputCep" placeholder="CEP" name="cep" value="<?=$this->input->post('cpf')?>">
+		      <a href="#" class="btn btn-mini" id="limpaCep">Limpar</a>
+		    </div>
+		  </div><br />
+		  <div class="control-group" style="margin-top: -20px;">
+		    <label class="control-label" for="inputLogra">Logradouro</label>
+		    <div class="controls">
+		      <input type="text" id="inputLogra" placeholder="Rua / Avenida" name="logradouro" value="<?=set_value('logradouro')?>">
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputNum">Número / Complemento</label>
+		    <div class="controls">
+		      <input type="text" class="input-small" id="inputNum" placeholder="Casa / Edifício" name="numero" value="<?=set_value('numero')?>">
+		      <input type="text" class="input-large" id="inputComp" placeholder="Apto / Bloco" name="complemento" value="<?=set_value('complemento')?>">
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputBairro">Bairro</label>
+		    <div class="controls">
+		      <input type="text" id="inputBairro" placeholder="Bairro" name="bairro" value="<?=set_value('bairro')?>">
+		    </div>
+		  </div>
+		  <?php
+		  	$estados = array(
+						'AC' => 'AC', 
+						'AL' => 'AL', 
+						'AP' => 'AP', 
+						'AM' => 'AM', 
+						'BA' => 'BA', 
+						'CE' => 'CE', 
+						'DF' => 'DF', 
+						'ES' => 'ES', 
+						'GO' => 'GO', 
+						'MA' => 'MA', 
+						'MT' => 'MT', 
+						'MS' => 'MS', 
+						'MG' => 'MG', 
+						'PA' => 'PA', 
+						'PB' => 'PB', 
+						'PR' => 'PR', 
+						'PE' => 'PE', 
+						'PI' => 'PI', 
+						'RJ' => 'RJ', 
+						'RN' => 'RN', 
+						'RS' => 'RS', 
+						'RO' => 'RO', 
+						'RR' => 'RR', 
+						'SC' => 'SC', 
+						'SP' => 'SP', 
+						'SE' => 'SE', 
+						'TO' => 'TO' 
+			); 
+		  ?>
+		  <div class="control-group">
+		    <label class="control-label" for="inputCidade">Cidade / Estado</label>
+		    <div class="controls">
+		      <input type="text" class="input-xlarge" id="inputCidade" placeholder="Cidade" name="cidade" value="<?=set_value('cidade')?>">
+		      <?=form_dropdown('estado', $estados, set_select('estado'), 'class="input-mini" id="inputEstado"');?>
+		    </div>
+		  </div>		  
+		  <div class="control-group">
+		    <label class="control-label" for="inputSexo">Sexo / Idade / Escolaridade</label>
+		    <div class="controls">
+		      <?=form_dropdown('sexo', array(''=>'Sexo','m'=>'Masculino','f'=>'Feminino'), set_select('sexo'), 'class="input-small" id="inputSexo"');?>
+		      <?=form_dropdown('idade', array(''=>'Idade','15a25'=>'15 a 25','26a35'=>'26 a 35','36a45'=>'36 a 45','>46'=>'46 ou mais'), set_select('idade'), 'class="input-small" id="inputIdade"');?>
+		      <?php $escolaridade = array(
+		      						''=>'Escolaridade',
+		      						'medio'=>'Ensino Médio',
+		      						'superior'=>'Ensino Superior',
+		      						'posgrad'=>'Pós Graduação',
+		      						'mestre'=>'Mestrado',
+		      						'doutor'=>'Doutorado')?>
+		      <?=form_dropdown('escolaridade', $escolaridade, set_select('escolaridade'), 'class="input-large" id="inputEscolar"');?>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <div class="controls">
+		      <label class="checkbox">
+      			<input type="checkbox" id="inputGastoTec" name="gasto_com_tec"> Costumo gastar parte da minha renda mensal com produtos de tecnologia.
+      		</label>
+      		<label class="checkbox">
+      			<input type="checkbox" id="inputUpgrade" name="upgrade_novopc"> Pretendo fazer um upgrade ou comprar um novo computador nos próximos 12 meses.
+      		</label>
+      		<label class="checkbox">
+      			<input type="checkbox" id="inputPesquiso" name="pesquiso_antes"> Costumo realizar pesquisas na internet antes de comprar.
+      		</label>
+      		<label class="checkbox">
+      			<input type="checkbox" id="inputRecom" name="recomendaria"> Sim, eu recomendaria o PreçoInfo a um amigo.
+    		  </label>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		  	<div class="control-label">
+		  		<label>Escolha seu brinde</label>
+	  		</div>
+		  	<div class="controls">
+		  		<label class="radio"><input type="radio" name="brinde" value="camiseta">Camiseta</label>
+		  		<label class="radio"><input type="radio" name="brinde" value="caneca">Caneca</label>
+		  		<label class="radio"><input type="radio" name="brinde" value="mousepad">Mouse Pad</label>
+		  		<label class="radio"><input type="radio" name="brinde" value="mousepad">Chaveiro</label>
+		  	</div>
+		  </div>-->
+  		  <div class="control-group" style="margin-top: 40px;">
+		    <label class="control-label" for="txtareaTermos">Termos de Uso</label>
+		    <div class="controls">
+		      <textarea cols="5" rows="3" id="txtareaTermos" readonly="readonly"></textarea>
+		      <label class="checkbox">
+      			<input type="checkbox" id="chkbxTermos" name="concordo"> Concordo com os termos de uso *
+    		  </label>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <div class="controls">
+		      <button type="reset" class="btn">Limpar</button>
+		      <button type="submit" class="btn btn-success">Enviar</button>
+		      <br /><br />* campos obrigatórios para conclusão do cadastro
+		    </div>
+		  </div>
+	  </fieldset>
+	</form>
+</div>
