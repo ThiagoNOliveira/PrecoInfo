@@ -5,15 +5,17 @@
 	if($this->uri->segment(1) == 'categorias' || !$this->uri->segment(1)) $pesquisar = 'produtos';
 	else $pesquisar = 'produtos';
 ?>*@
-
+@{
+    var clima = ConsumingWeatherJsonWebService.ObterInformacoes();
+}
 <header>
     <section id="top-um" class="navbar navbar-inverse">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" title="@(((Weather)ViewBag.Clima).Clima)">
-                    <small class="muted">min @(((Weather)ViewBag.Clima).TemperaturaMinima)&deg;/ máx @(((Weather)ViewBag.Clima).TemperaturaMaxima)&deg;</small>&nbsp;&nbsp;
-                <img src="@("/Content/ico/forecast/" + ((Weather)ViewBag.Clima).Icone + ".png")" style="width: 20px;">
-                    <strong>@(((Weather)ViewBag.Clima).Temperatura)&deg;</strong>&nbsp;&nbsp;
+                <div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" title="@(clima.Clima)">
+                    <small class="muted">min @(clima.TemperaturaMinima)&deg;/ máx @(clima.TemperaturaMaxima)&deg;</small>&nbsp;&nbsp;
+                <img src="@("/Content/ico/forecast/" + clima.Icone + ".png")" style="width: 20px;">
+                    <strong>@(clima.Temperatura)&deg;</strong>&nbsp;&nbsp;
                     <span style="color: #5B87C3;">SÃO PAULO</span>
                 </div>
                 <div class="pull-right">
