@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infraestrutura\ConsumingWeatherJsonWebService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -477,19 +478,19 @@
     <Content Include="Views\Servico\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Usuario\_cadastro-comum.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Usuario\_cadastro-loja.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Usuario\_cadastro-prestador.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Usuario\_cadastro-sucesso.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Usuario\_reset-senha.cshtml" />
+    <Content Include="Views\Usuario\Loja.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\Prestador.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\Usuario.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\EsqueciMinhaSenha.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

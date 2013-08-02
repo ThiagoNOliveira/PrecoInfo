@@ -3,31 +3,32 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container">
-	<div class="alert alert-info" style="text-align:center;">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		<h3>Aproveite o período de pré-lançamento e cadastre-se.<br />Os serviços do PreçoInfo são gratuitos até o final de 2013.</h3>
-	</div>
-	<div style="margin-left:auto;margin-right:auto;width:50%">
-		<div class="page-header">
-			<h2>Cadastre-se no PreçoInfo</h2>
-		</div>
-		<div class="row">
-			<div class="well span6">
-				<h3>Usuário</h3>
-				<p>Aproveite as vantagens de ter um cadastro. Você poderá criar uma lista de produtos favoritos e poderá anunciar produtos usados na sessão Classificados.</p>
-				<a @*href="<?=base_url('cadastro-comum')?>"*@ class="btn btn-large btn-success"><i class="icon-user icon-white"></i> Cadastre-se</a>
-			</div>
-			<div class="well span6">
-				<h3>Loja/Revenda</h3>
-				<p class="text-success">Empresas estabelecidas, com CNPJ válido, poderão anunciar seus produtos e serviços. Escolha o melhor plano para sua revenda ou assistência técnica.</p>
-				<a @*href="<?=base_url('cadastro-loja')?>"*@ class="btn btn-large btn-success"><i class="icon-shopping-cart icon-white"></i> Cadastre-se</a>
-			</div>
-			<div class="well span6">
-				<h3>Prestadores de Serviço</h3>
-				<p class="text-success">Empresas estabelecidas, com CNPJ válido, poderão divulgar seus serviços.</p>
-				<p class="text-info">Profissionais Autônomos, com CPF váldo, poderão divulgar seus serviços.</p>
-				<a @*href="<?=base_url('cadastro-prestador')?>"*@ class="btn btn-large btn-success"><i class="icon-wrench icon-white"></i> Cadastre-se</a>
-			</div>
-		</div>
-	</div>
+    <div class="alert alert-info" style="text-align: center;">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h3>Aproveite o período de pré-lançamento e cadastre-se.<br />
+            Os serviços do PreçoInfo são gratuitos até o final de 2013.</h3>
+    </div>
+    <div style="margin-left: auto; margin-right: auto; width: 50%">
+        <div class="page-header">
+            <h2>Cadastre-se no PreçoInfo</h2>
+        </div>
+        <div class="row">
+            <div class="well span6">
+                <h3>Usuário</h3>
+                <p>Aproveite as vantagens de ter um cadastro. Você poderá criar uma lista de produtos favoritos e poderá anunciar produtos usados na sessão Classificados.</p>
+                <a href="~/cadastrar/usuario" class="btn btn-large btn-success"><i class="icon-user icon-white"></i>Cadastre-se</a>
+            </div>
+            <div class="well span6">
+                <h3>Loja/Revenda</h3>
+                <p class="text-success">Empresas estabelecidas, com CNPJ válido, poderão anunciar seus produtos e serviços. Escolha o melhor plano para sua revenda ou assistência técnica.</p>
+                <a href="~/cadastrar/loja" class="btn btn-large btn-success"><i class="icon-shopping-cart icon-white"></i>Cadastre-se</a>
+            </div>
+            <div class="well span6">
+                <h3>Prestadores de Serviço</h3>
+                <p class="text-success">Empresas estabelecidas, com CNPJ válido, poderão divulgar seus serviços.</p>
+                <p class="text-info">Profissionais Autônomos, com CPF váldo, poderão divulgar seus serviços.</p>
+                <a href="~/cadastrar/prestador" class="btn btn-large btn-success"><i class="icon-wrench icon-white"></i>Cadastre-se</a>
+            </div>
+        </div>
+    </div>
 </div>

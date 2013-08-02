@@ -1,4 +1,5 @@
-﻿@*<?php
+﻿@using PrecoInfo.UI.Infraestrutura
+@*<?php
 	if(preg_match('/(?i)msie/',$_SERVER['HTTP_USER_AGENT'])) $extensao = 'png'; //formatando extensão de arquivo de logotipo. PNG para IE e SVG para outros
 	else $extensao = 'svg';
 	if($this->uri->segment(1) == 'categorias' || !$this->uri->segment(1)) $pesquisar = 'produtos';
@@ -9,10 +10,10 @@
     <section id="top-um" class="navbar navbar-inverse">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" @*title="<?=$clima?>"*@>
-                    <small class="muted">min @*<?=$temp_min?>*@&deg;/ máx @*<?=$temp_max?>*@&deg;</small>&nbsp;&nbsp;
-                @*<img src="<?=base_url('assets/ico/forecast/'.$clima_ico.'.png')?>" style="width: 20px;">*@
-                    @*<strong><?=$temp_atual?>&deg;</strong>&nbsp;&nbsp;*@
+                <div class="pull-left hidden-phone" style="color: #eee; line-height: 40px; vertical-align: center;" title="@(((Weather)ViewBag.Clima).Clima)">
+                    <small class="muted">min @(((Weather)ViewBag.Clima).TemperaturaMinima)&deg;/ máx @(((Weather)ViewBag.Clima).TemperaturaMaxima)&deg;</small>&nbsp;&nbsp;
+                <img src="@("/Content/ico/forecast/" + ((Weather)ViewBag.Clima).Icone + ".png")" style="width: 20px;">
+                    <strong>@(((Weather)ViewBag.Clima).Temperatura)&deg;</strong>&nbsp;&nbsp;
                     <span style="color: #5B87C3;">SÃO PAULO</span>
                 </div>
                 <div class="pull-right">
@@ -33,7 +34,7 @@
                         <li class="divider-vertical"></li>
                         @if (Session["Usuario"] == null)
                         {
-                            <li><a href="../Usuario" rel="bookmark">Cadastre-se</a></li>
+                            <li><a href="~/cadastro" rel="bookmark">Cadastre-se</a></li>
                             <li class="divider-vertical"></li>
                             <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
                         }
@@ -51,7 +52,7 @@
                     @* todo: Alterar para view data *@
                     @if (Session["Usuario"] == null)
                     {
-                        <li><a href="@Html.ActionLink("Cadastro","Index","Usuario")" rel="bookmark">Cadastre-se</a></li>
+                        <li><a href="~/cadastro" rel="bookmark">Cadastre-se</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="#loginform" role="button" data-toggle="modal" rel="nofollow"><i class="icon-lock icon-white"></i>&nbsp;&nbsp;Login</a></li>
                     }

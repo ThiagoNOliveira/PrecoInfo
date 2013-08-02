@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "EsqueciMinhaSenha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- tela de login -->
+<div class="container-narrow">
+    @*<?php if(isset($box) && isset($msg)): ?>*@
+    @*<div class="alert alert-<?=$box?>"><?=$msg?></div>*@
+    @*<?php endif; ?>*@
+    <form @*action="<?=base_url('/esqueci-minha-senha')?>"*@ class="form-horizontal" method="get">
+        <fieldset>
+            <legend>Esqueci minha senha</legend>
+            <label for="inputEmail">Email de cadastro:</label>
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope"></i></span>
+                <input id="inputEmail" type="text" name="email" placeholder="Email de cadastro no PreçoInfo">
+            </div>
+            <br />
+            <br />
+            <label for="inputCadastro">... ou CPF/CNPJ, caso não lembre o Email de cadastro:</label>
+            <input id="inputCadastro" type="text" name="cadastro" placeholder="CPF / CNPJ">
+            <span class="help-block">(dígitos númericos sem pontos ou hífen)</span>
+            <br />
+            <br />
+            <button type="submit" class="btn btn-success">
+                <i class="icon-repeat icon-white"></i>Recuperar minha senha!
+            </button>
+        </fieldset>
+    </form>
+</div>
+<!-- fim tela de login -->

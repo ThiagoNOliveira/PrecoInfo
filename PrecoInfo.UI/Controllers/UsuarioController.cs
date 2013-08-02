@@ -16,5 +16,24 @@ namespace PrecoInfo.UI.Controllers
             return View();
         }
 
+        public ActionResult Loja()
+        {
+            return View();
+        }
+        public ActionResult Prestador()
+        {
+            return View();
+        }
+        public ActionResult Usuario()
+        {
+            return View();
+        }
+
+        public ActionResult EsqueciMinhaSenha()
+        {
+            return View();
+        }
+
+
     }
 }

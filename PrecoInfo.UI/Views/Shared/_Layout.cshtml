@@ -80,15 +80,6 @@
 	
     <?php /* FUNÇÕES DO BOOTSTRAP */ ?>*@
 
-    <script type="text/javascript">
-        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=3448439&lang=pt&units=metric', function (data) {
-            debugger
-            $.each(data, function (index, element) {
-                alert(element.TotalClass);
-            });
-        });
-    </script>
-
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $("[title]").tooltip({ placement: 'bottom' });
@@ -100,7 +91,9 @@
             });
         });
     </script>
-    @*	<?php include("login_form.php"); ?>
+    @Html.Partial("_Login_form");
+
+    @*
 	<?php if(isset($_GET['login']) || $this->session->flashdata('box')): ?>
 		<script>
 		    $(document).ready(function () {
