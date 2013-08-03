@@ -449,7 +449,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\_Login_form.cshtml" />
+    <Content Include="Views\Shared\_FormularioDeLogin.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Em_breve.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
@@ -478,7 +478,7 @@
     <Content Include="Views\Servico\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Usuario\_cadastro-sucesso.cshtml" />
+    <Content Include="Views\Usuario\ConfirmacaoDeCadastroComum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Usuario\Loja.cshtml" />
@@ -491,6 +491,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Usuario\EsqueciMinhaSenha.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\FalhaNoCadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\CadastroAtivado.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\ConfirmacaoDeCadastroComercial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_DropdownDeEstados.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

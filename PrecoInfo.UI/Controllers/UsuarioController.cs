@@ -34,6 +34,11 @@ namespace PrecoInfo.UI.Controllers
             return View();
         }
 
+        public ActionResult Logar(string username, string senha)
+        {
+            return null;
+        }
+
 
     }
 }

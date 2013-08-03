@@ -96,6 +96,7 @@
     <Compile Include="ScopeInstance\InstanceScoperBase.cs" />
     <Compile Include="ScopeInstance\SingletonInstanceScoper.cs" />
     <Compile Include="ScopeInstance\ThreadStaticInstanceScoper.cs" />
+    <Compile Include="Util\EnumUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
