@@ -1,0 +1,67 @@
+﻿<div class="container-narrow">
+	<?php //montando bradcrumbs
+	$sequencia_cats = array_reverse($sequencia_cats);
+	foreach($sequencia_cats as $crumb) {
+		if(isset($breadcrumb)) {
+			if($crumb->nome == $categoria->nome) {
+				$breadcrumb .= ' | '.$crumb->nome;
+			}
+			else {
+				$breadcrumb .= ' | '.'<a href="'.base_url('pesquisa-de-precos/'.$crumb->slug).'">'.$crumb->nome.'</a>';
+			}
+		}
+		else {
+			$breadcrumb = '<a href="'.base_url('pesquisa-de-precos/'.$crumb->slug).'">'.$crumb->nome.'</a>';
+		}
+	} ?>
+	<p><?=$breadcrumb?></p>
+	<h1><?=$categoria->nome?></h1>
+	<?php if(isset($sub_cats) && !empty($sub_cats)): ?>
+		<div class="well" style="text-align:center">
+			<?php
+				$contador = 1;
+				$ultimo = count($sub_cats); 
+				foreach($sub_cats as $sub_cat): ?>
+					<a href="<?=$sub_cat['slug']?>" title="<?=$sub_cat['nome']?>"><?=$sub_cat['nome']?></a>
+					<?php if($contador != $ultimo) echo "&nbsp;|&nbsp;"; ?>
+			<?php
+				$contador++; 
+				endforeach; ?>
+		</div>
+	<?php else: ?>
+		<hr />
+	<?php endif; ?>
+	
+	<?php if(!empty($servicos)): ?>
+	<div>
+		<?=$map['html'];?>
+	</div>
+	<p>&nbsp;</p>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Prestador do Serviço</th>
+					<th>Especificação</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($servicos as $servico): ?>
+				<tr>
+					<td>
+						<a href="#loja" class="verloja" loja="<?=$servico->loja->usuario_id?>" role="button" data-toggle="modal">
+							<?=$servico->loja->nome_fantasia?>
+						</a>
+					</td>
+					<td><?=$servico->descricao?></td>
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+	<div id="loja" class="modal hide fade">
+	  
+	</div>	
+	
+	</div>
+	<?php endif; ?>
+</div>

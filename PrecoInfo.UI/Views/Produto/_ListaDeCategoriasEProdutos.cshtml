@@ -1,0 +1,92 @@
+﻿<div class="container-narrow">
+	<?php //montando bradcrumbs
+	$sequencia_cats = array_reverse($sequencia_cats);
+	foreach($sequencia_cats as $crumb) {
+		if(isset($breadcrumb)) {
+			if($crumb->nome == $categoria->nome) {
+				$breadcrumb .= ' | '.$crumb->nome;
+			}
+			else {
+				$breadcrumb .= ' | '.'<a href="'.base_url('pesquisa-de-precos/'.$crumb->slug).'">'.$crumb->nome.'</a>';
+			}
+		}
+		else {
+			$breadcrumb = '<a href="'.base_url('pesquisa-de-precos/'.$crumb->slug).'">'.$crumb->nome.'</a>';
+		}
+	} ?>
+	<p><?=$breadcrumb?></p>
+	<h1><?=$categoria->nome?></h1>
+	<?php if(isset($sub_cats) && !empty($sub_cats)): ?>
+		<div class="well" style="text-align:center">
+			<?php
+				$contador = 1;
+				$ultimo = count($sub_cats); 
+				foreach($sub_cats as $sub_cat): ?>
+					<a href="<?=$sub_cat['slug']?>" title="<?=$sub_cat['nome']?>"><?=$sub_cat['nome']?></a>
+					<?php if($contador != $ultimo) echo "&nbsp;|&nbsp;"; ?>
+			<?php
+				$contador++; 
+				endforeach; ?>
+		</div>
+	<?php else: ?>
+		<hr />
+	<?php endif; ?>
+	
+	<?php if(!empty($produtos)): ?>
+	<div>
+		<?=$map['html'];?>
+	</div>
+	<p>&nbsp;</p>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Marca</th>
+					<th>Produto</th>
+					<th style="width:40%">Especificação</th>
+					<th>Preço</th>
+					<th>Loja</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($produtos as $produto): ?>
+				<tr>
+					<td class="celula-favorito">
+						<?php if(!$this->auth->esta_logado()): ?>
+							<span title="Faça login para visualizar seus produtos favoritos">&nbsp;<i class="icon-star-empty"></i>&nbsp;</span>
+						<?php else: ?>
+							<?php if ($this->auth->get_usuario('perfil_id') == 0 || $this->auth->get_usuario('perfil_id') == 9): ?>
+								<?php 
+									$query = $this->db->get_where('anuncio_usuario', array('usuario_id' => $this->auth->get_usuario('userid'), 'anuncio_id' => $produto->anuncio_id));
+									if($query->num_rows() > 0):
+								?>
+									<a href="#" class="produto-favorito" anunid="<?=$produto->anuncio_id?>" fav="true" title="Este produto está nos seus favoritos. Clique para remover"><i class="icon-star"></i></a>
+								<?php else: ?>
+									<a href="#" class="produto-favorito" anunid="<?=$produto->anuncio_id?>" fav="false" title="Adicione este produto aos seus favoritos"><i class="icon-star-empty"></i></a>
+								<?php endif; ?>
+							<?php endif; ?>
+						<?php endif; ?>
+					</td>
+					<td><?=$produto->fab_nome?></td>
+					<td><?=$produto->prd_nome?></td>
+					<td><?=$produto->prd_especs?></td>
+					<td>R$ <?=$produto->prd_preco?></td>
+					<td>
+						<a href="#loja" class="verloja" loja="<?=$produto->loja->usuario_id?>" role="button" data-toggle="modal">
+							<?=$produto->loja->nome_fantasia?>
+						</a>
+					</td>
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+		<div id="loja" class="modal hide fade">
+		  
+		</div>	
+	
+	</div>
+	<?php else: ?>
+		<h3 class="alert alert-error">Não existe nenhum produto anunciado nesta categoria</h3>
+	<?php endif; ?>
+</div>

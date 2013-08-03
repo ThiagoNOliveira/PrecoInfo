@@ -1,0 +1,36 @@
+﻿		<div class="container hidden-phone">
+		    <div id="categorias" class="box">
+	        	<div class="row">
+	        		<?php 
+	        		for($i=0;$i<12;$i++): //percorrendo o array de categorias, 3 categorias por linha
+	        			if(($i)%3 == 0 && $i!=0) {
+	        				echo '</div><div class="row">'; //quebra linha a cada 3 categorias mostradas
+						}
+	        		?>
+	        		<div class="span4 categ-pai cat<?=$i%3?>">
+	        			<a href="<?=base_url('pesquisa-de-precos/'.$cats_pai[$i]['slug'])?>" rel="bookmark">
+		        			<img src="<?=assets_url('ico').'cat_'.$cats_pai[$i]['slug']?>.png"><br />
+		        			<?=$cats_pai[$i]['nome']?></a><br />
+	        			<?php foreach ($cats_pai[$i]['filhas'] as $filha): //listando cada subcategoria?>
+	        				<span class="categ-filha">
+	        					<a href="<?=base_url('pesquisa-de-precos/'.$filha['slug'])?>" rel="bookmark"><?=$filha['nome']?></a>
+        					</span><br />
+        				<?php endforeach; ?>
+	        		</div>
+	        		<?php endfor; ?>
+	        	</div>
+	        </div>
+		</div>
+		<div class="container-fluid visible-phone categorias-mobile">
+			<div class="row-fluid">
+				<?php 
+	    		for($i=0;$i<12;$i++): //percorrendo o array de categorias, 3 categorias por linha
+	    		?>
+	    		<div class="span1 categ-pai img-rounded cat<?=$i?>">
+	    			<a href="<?=base_url('pesquisa-de-precos/'.$cats_pai[$i]['slug'])?>" rel="bookmark">
+	        			<img src="<?=assets_url('ico').'cat_'.$cats_pai[$i]['slug']?>.png" style="width:50%;"><br />
+	        			<?=$cats_pai[$i]['nome']?></a><br />
+	    		</div>
+	    		<?php endfor; ?>
+    		</div>
+		</div>
