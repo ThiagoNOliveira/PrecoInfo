@@ -49,7 +49,6 @@
     <Compile Include="ComponenteUsuario\PessoaJuridica.cs" />
     <Compile Include="ComponenteUsuario\TipoUsuario.cs" />
     <Compile Include="ComponenteUsuario\Usuario.cs" />
-    <Compile Include="EstadosEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
