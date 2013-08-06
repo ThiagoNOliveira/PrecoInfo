@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PrecoInfo.Domain.ComponenteUsuario;
+using PrecoInfo.UI.Models;
+using ProcuraFacil.Core.Domain.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +11,6 @@ namespace PrecoInfo.UI.Controllers
 {
     public class UsuarioController : Controller
     {
-        //
-        // GET: /Usuario/
-
         public ActionResult Index()
         {
             return View();
@@ -34,11 +34,27 @@ namespace PrecoInfo.UI.Controllers
             return View();
         }
 
+        public ActionResult SalvarUsuario(UsuarioDTO usuarioDTO)
+        {
+            PessoaFisica usuario = new PessoaFisica
+            {
+                Email = usuarioDTO.Email,
+                Celular = usuarioDTO.Celular,
+                Senha = usuarioDTO.Senha,
+                TipoUsuario = TipoUsuario.Usuario,
+                Nome = usuarioDTO.Nome
+            };
+
+            Repositorio<UsuarioBase> usuarios = new Repositorio<UsuarioBase>();
+
+            usuarios.Adicionar(usuario);
+
+            return View("/cadastrar/usuario");
+        }
+
         public ActionResult Logar(string username, string senha)
         {
             return null;
         }
-
-
     }
 }

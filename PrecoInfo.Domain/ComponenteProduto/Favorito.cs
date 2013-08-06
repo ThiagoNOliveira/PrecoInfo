@@ -11,6 +11,6 @@ namespace PrecoInfo.Domain.ComponenteProduto
     {
         public virtual Guid Id { get; set; }
         public virtual Produto Produto { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual UsuarioBase Usuario { get; set; }
     }
 }

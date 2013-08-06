@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrecoInfo.Domain.ComponenteUsuario
 {
-    public class PessoaFisica : Usuario
+    public class PessoaFisica : UsuarioBase
     {
         public virtual string Nome { get; set; }
         public virtual string CPF { get; set; }

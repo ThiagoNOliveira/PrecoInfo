@@ -12,6 +12,6 @@ namespace PrecoInfo.Domain.ComponenteProduto
         public virtual Guid Id { get; set; }
         public virtual double Preco { get; set; }
         public virtual DescricaoProduto DescricaoProduto { get; set; }
-        public virtual Usuario Fornecedor { get; set; }
+        public virtual UsuarioBase Fornecedor { get; set; }
     }
 }

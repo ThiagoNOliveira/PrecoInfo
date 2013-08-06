@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PrecoInfo.Domain.ComponenteUsuario
 {
-    public abstract class Usuario
+    public class UsuarioBase : IAggregateRoot<Guid>
     {
         public virtual Guid Id { get; set; }
         public virtual TipoUsuario TipoUsuario { get; set; }

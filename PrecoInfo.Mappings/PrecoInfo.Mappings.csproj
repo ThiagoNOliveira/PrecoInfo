@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDFA91E3-BBAA-4603-A878-1428D5943787}</ProjectGuid>
+    <ProjectGuid>{CF0B865B-0044-48DA-8B80-CC630F0A7C3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrecoInfo.Domain</RootNamespace>
-    <AssemblyName>PrecoInfo.Domain</AssemblyName>
+    <RootNamespace>PrecoInfo.Mappings</RootNamespace>
+    <AssemblyName>PrecoInfo.Mappings</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,31 +54,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponenteProduto\Categoria.cs" />
-    <Compile Include="ComponenteProduto\Produto.cs" />
-    <Compile Include="ComponenteProduto\Favorito.cs" />
-    <Compile Include="ComponenteProduto\Marca.cs" />
-    <Compile Include="ComponenteProduto\DescricaoProduto.cs" />
-    <Compile Include="ComponenteUsuario\ComponenteEndereco\Endereco.cs" />
-    <Compile Include="ComponenteUsuario\PessoaFisica.cs" />
-    <Compile Include="ComponenteUsuario\PessoaJuridica.cs" />
-    <Compile Include="ComponenteUsuario\TipoUsuario.cs" />
-    <Compile Include="ComponenteUsuario\Usuario.cs" />
-    <Compile Include="IAggregateRootcs.cs" />
+    <Compile Include="Produto\CategoriaMap.cs" />
+    <Compile Include="Produto\DescricaoProdutoMap.cs" />
+    <Compile Include="Produto\FavoritoMap.cs" />
+    <Compile Include="Produto\MarcaMap.cs" />
+    <Compile Include="Produto\ProdutoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\BaseRepository.cs" />
-    <Compile Include="Repository\IRepositorio.cs" />
-    <Compile Include="Repository\Repositorio.cs" />
+    <Compile Include="Usuario\Endereco\EnderecoMap.cs" />
+    <Compile Include="Usuario\PessoaFisicaMap.cs" />
+    <Compile Include="Usuario\PessoaJuridicaMap.cs" />
+    <Compile Include="Usuario\UsuarioMap.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PrecoInfo.InfraStructure\PrecoInfo.InfraStructure.csproj">
-      <Project>{af51e4a6-c03f-4247-81ed-b1a10a726d1f}</Project>
-      <Name>PrecoInfo.InfraStructure</Name>
+    <ProjectReference Include="..\PrecoInfo.Domain\PrecoInfo.Domain.csproj">
+      <Project>{cdfa91e3-bbaa-4603-a878-1428d5943787}</Project>
+      <Name>PrecoInfo.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)PrecoInfo.Domain.dll" "$(ProjectDir)..\Library\PrecoInfo.Domain.dll"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetDir)PrecoInfo.Mappings.dll" "$(ProjectDir)..\Library\PrecoInfo.Mappings.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
