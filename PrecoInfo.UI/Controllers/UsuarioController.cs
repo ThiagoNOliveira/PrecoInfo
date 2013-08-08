@@ -26,6 +26,11 @@ namespace PrecoInfo.UI.Controllers
         }
         public ActionResult Usuario()
         {
+            if (!string.IsNullOrEmpty(Request.QueryString["msg"]))
+            {
+ 
+            }
+
             return View();
         }
 
@@ -49,7 +54,7 @@ namespace PrecoInfo.UI.Controllers
 
             usuarios.Adicionar(usuario);
 
-            return View("/cadastrar/usuario");
+            return Redirect("/cadastrar/usuario?msg=cadastrado com sucesso");
         }
 
         public ActionResult Logar(string username, string senha)
