@@ -87,6 +87,42 @@ namespace PrecoInfo.UI.Controllers
 
             categorias.Add(categoria6);
 
+            Categoria categoria7 = new Categoria { Nome = "Alimentação", NomeImagem = "../Content/ico/cat_alimentacao.png" };
+
+            categoria7.SubCategorias = new List<Categoria>();
+
+            categoria7.SubCategorias.Add(new Categoria { Nome = "Estabilizadores" });
+            categoria7.SubCategorias.Add(new Categoria { Nome = "Fontes" });
+            categoria7.SubCategorias.Add(new Categoria { Nome = "Fontes e Carregadores" });
+            categoria7.SubCategorias.Add(new Categoria { Nome = "NoBreaks" });
+            categoria7.SubCategorias.Add(new Categoria { Nome = "Pilhas e Baterias" });
+
+            categorias.Add(categoria7);
+
+            Categoria categoria8 = new Categoria { Nome = "Games", NomeImagem = "../Content/ico/cat_games.png" };
+
+            categoria8.SubCategorias = new List<Categoria>();
+
+            categoria8.SubCategorias.Add(new Categoria { Nome = "Acessórios e Peças" });
+            categoria8.SubCategorias.Add(new Categoria { Nome = "Jogos" });
+            categoria8.SubCategorias.Add(new Categoria { Nome = "Joysticks e Gamepads" });
+            categoria8.SubCategorias.Add(new Categoria { Nome = "Vídeo Games (Consoles)" });
+            categoria8.SubCategorias.Add(new Categoria { Nome = "Pilhas e Baterias" });
+
+            categorias.Add(categoria8);
+
+            Categoria categoria9 = new Categoria { Nome = "Eletrônicos", NomeImagem = "../Content/ico/cat_eletronicos.png" };
+
+            categoria9.SubCategorias = new List<Categoria>();
+
+            categoria9.SubCategorias.Add(new Categoria { Nome = "Acessórios p/ Câmeras Fotográficas" });
+            categoria9.SubCategorias.Add(new Categoria { Nome = "Automotivo" });
+            categoria9.SubCategorias.Add(new Categoria { Nome = "Câmeras" });
+            categoria9.SubCategorias.Add(new Categoria { Nome = "Carregadores para Câmeras" });
+            categoria9.SubCategorias.Add(new Categoria { Nome = "GPS / Calculadoras" });
+
+            categorias.Add(categoria9);
+
             ViewBag.Produtos = categorias;
 
             return View();
