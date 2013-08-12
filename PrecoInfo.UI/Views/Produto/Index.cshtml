@@ -3,4 +3,52 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+
+
+
+<div class="container hidden-phone">
+    <div id="categorias" class="box">
+
+        @{
+            int i=0;
+
+            foreach (PrecoInfo.UI.Models.Categoria produto in @ViewBag.Produtos)
+            {
+                if(i==0)
+                {
+                      @:<div class="row">
+                }
+                
+                string classe = "span4 categ-pai cat" + i;
+
+                    @:<div class="@classe">  
+                    @:<a href="http://tcc.gustavobrandao.com.br/precoinfo/pesquisa-de-precos/computador" rel="bookmark">
+                    @:<img src="@produto.NomeImagem"><br>@produto.Nome</a><br>
+
+                foreach (PrecoInfo.UI.Models.Categoria subCategoria in @produto.SubCategorias)
+                {
+                     @:<span class="categ-filha">
+                     @:<a href="@subCategoria.NomeImagem" rel="bookmark">@subCategoria.Nome</a>
+                     @:</span>
+                     @:<br>
+                }                  
+                
+                @:</div>
+
+                if(i==2)
+                {
+                    @:</div>
+                    i = 0;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+        }
+
+      
+    </div>
+
+</div>
+

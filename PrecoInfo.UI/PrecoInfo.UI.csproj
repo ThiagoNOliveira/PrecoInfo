@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Infraestrutura\ConsumingWeatherJsonWebService.cs" />
     <Compile Include="Models\CategoriaModel.cs" />
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\UsuarioDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWorkModule.cs" />
