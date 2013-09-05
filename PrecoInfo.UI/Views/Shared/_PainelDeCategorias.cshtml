@@ -1,0 +1,16 @@
+﻿@using PrecoInfo.UI.Models
+<div class="aside" role="complementary">
+    <div class="nav vertical-qcat" role="navigation">
+        @foreach (Categoria categoria in ViewBag.categorias)
+        {
+            <dl>
+                <dt>@categoria.Nome</dt>
+
+                @foreach (Categoria subcategoria in categoria.SubCategorias)
+                {
+                    <dd><a title="@subcategoria.Nome" href="#">@subcategoria.Nome</a><em>(4377)</em> </dd>    
+                }
+            </dl>        
+        }
+    </div>
+</div>
