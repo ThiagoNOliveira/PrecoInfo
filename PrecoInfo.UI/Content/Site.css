@@ -1,4 +1,4041 @@
-﻿/*
+﻿html {
+	color: #000;
+	background: #FFF
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+fieldset, img {
+	border: 0
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: normal
+}
+li {
+	list-style: none
+}
+caption, th {
+	text-align: left
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+q:before, q:after {
+	content: ''
+}
+abbr, acronym {
+	border: 0;
+	font-variant: normal
+}
+sup {
+	vertical-align: text-top
+}
+sub {
+	vertical-align: text-bottom
+}
+input, textarea, select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit
+}
+input, textarea, select {
+*font-size:100%
+}
+legend {
+	color: #000
+}
+body {
+	font: 12px/1.231 arial, helvetica, clean, sans-serif;
+*font-size:small;
+*font:x-small
+}
+select, input, button, textarea {
+	font: 99% arial, helvetica, clean, sans-serif
+}
+table {
+	font-size: inherit;
+	font: 100%
+}
+pre, code, kbd, samp, tt {
+	font-family: monospace;
+*font-size:108%;
+	line-height: 100%
+}
+.line:after, .lastUnit:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0!important;
+	line-height: 0;
+	font-size: xx-large;
+	content: ' x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x '
+}
+.line {
+*zoom:1
+}
+.unit {
+	float: left
+}
+.size1of1 {
+	float: none
+}
+.size1of2 {
+	width: 50%
+}
+.size1of3 {
+	width: 33.33333%
+}
+.size2of3 {
+	width: 66.66666%
+}
+.size1of4 {
+	width: 25%
+}
+.size3of4 {
+	width: 75%
+}
+.size1of5 {
+	width: 20%
+}
+.size2of5 {
+	width: 40%
+}
+.size3of5 {
+	width: 60%
+}
+.size4of5 {
+	width: 80%
+}
+.size1of6 {
+	width: 16.666%
+}
+.size2of6 {
+	width: 33.332%
+}
+.size3of6 {
+	width: 50%
+}
+.size4of6 {
+	width: 66.664%
+}
+.size5of6 {
+	width: 83.333%
+}
+.lastUnit {
+	display: table-cell;
+	float: none;
+	width: auto;
+*display:block;
+*zoom:1;
+	_position: relative;
+	_left: -3px;
+	_margin-right: -3px
+}
+.main {
+	display: table-cell;
+*display:block;
+	width: auto
+}
+.body, .main {
+*zoom:1
+}
+.body:after, .main:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0!important;
+	line-height: 0;
+	font-size: xx-large;
+*content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x "
+}
+.leftCol {
+	float: left;
+	width: 250px;
+	_margin-right: -3px
+}
+.rightCol {
+	float: right;
+	width: 300px;
+	_margin-left: -3px
+}
+a {
+	text-decoration: none
+}
+a:hover {
+	text-decoration: underline
+}
+a:link, a:visited {
+	color: #009
+}
+.hide {
+	display: none
+}
+#bpNaHoraWidget {
+	display: none!important
+}
+#header {
+	margin-bottom: 50px
+}
+#footer {
+	margin-top: 50px
+}
+#footer-copyright {
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+	margin: 20px 0 20px 0;
+	text-align: center
+}
+#footer-powered-by {
+	padding-bottom: 5px
+}
+#form_search {
+	margin: 0 auto;
+	position: relative;
+	width: auto
+}
+#main {
+	min-width: 965px;
+	width: 98%;
+	margin: 0 auto
+}
+#main-hd {
+	margin-bottom: 20px
+}
+h1 {
+	font-size: 18px;
+	font-weight: bold
+}
+#main-hd h1 small {
+	font-weight: normal;
+	font-size: 11px
+}
+#resultados {
+	overflow: hidden;
+	_zoom: 1
+}
+.tabs {
+	background: url(http://imagem.buscape.com.br/bp7/sprite_borders.gif) repeat-x scroll left bottom transparent;
+	overflow: hidden;
+	padding-left: 5px;
+	height: 25px
+}
+.tabs li {
+	background: none repeat scroll 0 0 #f0f0f0;
+	border: 1px solid #acacac;
+	display: inline;
+	float: left;
+	margin-right: 2px
+}
+.tabs li a, .tabs li span {
+	display: block;
+	float: left;
+	height: 18px;
+	padding: 5px 15px 0
+}
+.tabs .active {
+	background: none repeat scroll 0 0 #fff;
+	border-bottom-color: #fff;
+	font-weight: bold;
+	height: 18px;
+	padding: 5px 15px 0
+}
+.breadcrumb li {
+	display: inline;
+	margin-right: 8px;
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) no-repeat left 4px;
+	padding-left: 13px
+}
+.breadcrumb .first {
+	background: none repeat scroll 0 0 transparent;
+	padding: 0
+}
+.breadcrumb-title a, .breadcrumb-title span {
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) no-repeat 16px -10px;
+	padding-left: 40px
+}
+.breadcrumb-title a.first {
+	background: 0;
+	padding: 0
+}
+.avaliacao-nota {
+	background: url(http://imagem.buscape.com.br/skin40/sprite_avaliacao.gif) no-repeat 0 0;
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin-right: 5px;
+	width: 105px;
+	padding-top: 20px;
+	height: 0;
+	vertical-align: bottom
+}
+.avaliacao-estrela-10 {
+	background-position: 0 0
+}
+.avaliacao-estrela-9 {
+	background-position: 0 -31px
+}
+.avaliacao-estrela-8 {
+	background-position: 0 -62px
+}
+.avaliacao-estrela-7 {
+	background-position: 0 -93px
+}
+.avaliacao-estrela-6 {
+	background-position: 0 -124px
+}
+.avaliacao-estrela-5 {
+	background-position: 0 -155px
+}
+.avaliacao-estrela-4 {
+	background-position: 0 -186px
+}
+.avaliacao-estrela-3 {
+	background-position: 0 -217px
+}
+.avaliacao-estrela-2 {
+	background-position: 0 -248px
+}
+.avaliacao-estrela-1 {
+	background-position: 0 -279px
+}
+.avaliacao-estrela-0 {
+	background-position: 0 -310px
+}
+.avaliacao-mais-10 {
+	background-position: -300px 0
+}
+.avaliacao-mais-9 {
+	background-position: -300px -31px
+}
+.avaliacao-mais-8 {
+	background-position: -300px -62px
+}
+.avaliacao-mais-7 {
+	background-position: -300px -93px
+}
+.avaliacao-mais-6 {
+	background-position: -300px -124px
+}
+.avaliacao-mais-5 {
+	background-position: -300px -155px
+}
+.avaliacao-mais-4 {
+	background-position: -300px -186px
+}
+.avaliacao-mais-3 {
+	background-position: -300px -217px
+}
+.avaliacao-mais-2 {
+	background-position: -300px -248px
+}
+.avaliacao-mais-1 {
+	background-position: -300px -279px
+}
+.avaliacao-mais-0 {
+	background-position: -300px -310px
+}
+.avaliacao-barra-10 {
+	background-position: -150px 0
+}
+.avaliacao-barra-9 {
+	background-position: -150px -31px
+}
+.avaliacao-barra-8 {
+	background-position: -150px -62px
+}
+.avaliacao-barra-7 {
+	background-position: -150px -93px
+}
+.avaliacao-barra-6 {
+	background-position: -150px -124px
+}
+.avaliacao-barra-5 {
+	background-position: -150px -155px
+}
+.avaliacao-barra-4 {
+	background-position: -150px -186px
+}
+.avaliacao-barra-3 {
+	background-position: -150px -217px
+}
+.avaliacao-barra-2 {
+	background-position: -150px -248px
+}
+.avaliacao-barra-1 {
+	background-position: -150px -279px
+}
+.avaliacao-barra-0 {
+	background-position: -150px -310px
+}
+.avaliacao-barra2-10 {
+	background-position: -451px 0;
+	padding-top: 15px
+}
+.avaliacao-barra2-9 {
+	background-position: -451px -31px;
+	padding-top: 15px
+}
+.avaliacao-barra2-8 {
+	background-position: -451px -62px;
+	padding-top: 15px
+}
+.avaliacao-barra2-7 {
+	background-position: -451px -93px;
+	padding-top: 15px
+}
+.avaliacao-barra2-6 {
+	background-position: -451px -124px;
+	padding-top: 15px
+}
+.avaliacao-barra2-5 {
+	background-position: -451px -155px;
+	padding-top: 15px
+}
+.avaliacao-barra2-4 {
+	background-position: -451px -186px;
+	padding-top: 15px
+}
+.avaliacao-barra2-3 {
+	background-position: -451px -217px;
+	padding-top: 15px
+}
+.avaliacao-barra2-2 {
+	background-position: -451px -248px;
+	padding-top: 15px
+}
+.avaliacao-barra2-1 {
+	background-position: -451px -279px;
+	padding-top: 15px
+}
+.avaliacao-barra2-0 {
+	background-position: -451px -310px;
+	padding-top: 15px
+}
+.avaliacao-nota-wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 135px
+}
+.avaliacao-nota-wrapper .avaliacao-nota {
+	float: left;
+	display: block
+}
+.avaliacao-nota-wrapper .avaliacao-nota-numero {
+	display: block;
+	float: left;
+	padding-top: 3px
+}
+.prod-unico-ordenacao .bt-compare, .bt-compare, .bt-loja {
+	background-image: url("http://imagem.buscape.com.br/skin40/sprite_bts.png")
+}
+.prod-unico-ordenacao .boxMenu {
+	padding: 12px 0 0 0
+}
+.bt-loja {
+	background-position: 0 -37px;
+	width: 84px;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+	padding-top: 28px;
+	height: 0
+}
+.loja-abrir .bt-loja.es {
+	background-position: -84px -37px;
+	width: 107px
+}
+.loja-abrir .bt-loja.es_AR {
+	background-position: -191px -37px;
+	width: 107px
+}
+.bt-loja-mais {
+	background: url("http://imagem.buscape.com.br/skin40/verloja.gif");
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 95px;
+	height: 22px
+}
+.bt-compare {
+	background-position: 0 0;
+	width: 84px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 37px;
+	height: 0;
+	overflow: hidden
+}
+.bt-compare.es, .bt-compare.es_AR {
+	background-position: -84px 0;
+	width: 89px
+}
+a.ordenar {
+	display: inline-block;
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) right -180px no-repeat;
+	padding-right: 10px
+}
+#prod-unico-ficha {
+	margin-bottom: 10px
+}
+#prod-unico-ficha dl {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 10px
+}
+#prod-unico-ficha dt {
+	clear: left;
+	float: left;
+	width: 230px;
+	padding: 5px 0 5px 7px
+}
+#prod-unico-ficha dd {
+	padding: 8px 0 4px 7px;
+	border-bottom: 1px solid #cdcdcd
+}
+#prod-unico-ficha .first {
+	padding: 0 0 8px 7px
+}
+#prod-unico-ficha .group {
+	clear: both;
+	width: 100%;
+	font-weight: bold;
+	background: #f5f5f5;
+	margin-bottom: 5px
+}
+#prod-unico-header {
+	overflow: hidden;
+	margin-bottom: 5px
+}
+#prod-unico-header .imagem {
+	float: left;
+	width: 230px;
+	text-align: center
+}
+#prod-unico-header .descricao {
+	float: left;
+	width: 75%
+}
+#prod-unico-header h1 {
+	color: #282828;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+#prod-unico-header .preco {
+	font-size: 17px;
+	margin-bottom: 10px
+}
+#prod-unico-header .preco strong {
+	font-size: 18px;
+	color: #009
+}
+#prod-unico-header .avaliacao {
+	margin-bottom: 10px;
+	display: inline-block;
+	line-height: 22px
+}
+#prod-unico-header .caracProduto {
+	line-height: 16px;
+	font-size: 11px
+}
+#prod-unico-header table {
+	border: 1px solid #e2e2e2;
+	font-size: 11px
+}
+#prod-unico-tabs {
+	position: relative;
+	margin: 20px 0
+}
+#prod-unico-tabs .filtro-entrega-protegida {
+	display: block;
+	position: relative;
+	background: url(http://imagem.buscape.com.br/mesclada/logo-pd.gif) right 3px no-repeat;
+	width: 115px;
+	padding: 0 86px 0 0;
+	text-align: right;
+	float: right;
+	margin-top: -35px;
+	color: #008000
+}
+#prod-unico-ref {
+	margin-bottom: 20px
+}
+#prod-unico-ref .hd {
+	padding: 7px 12px
+}
+#prod-unico-ref .hd a {
+	outline: 0
+}
+.prod-unico-ref-active .hd {
+	padding: 5px 10px;
+	background: #eee;
+	border: solid 1px #acacac
+}
+.prod-unico-ref-active .hd span {
+	display: none
+}
+.prod-unico-ref-active .bd {
+	display: block!important
+}
+#prod-unico-ref .bd {
+	border: solid 1px #acacac;
+	border-top: 0;
+	padding: 10px;
+	display: none
+}
+#prod-unico-ref label {
+	display: block;
+	margin-bottom: 10px;
+	float: left;
+	width: 220px
+}
+#prod-unico-ref p {
+	margin-bottom: 10px
+}
+#prod-unico-ref .line-submit {
+	text-align: right
+}
+#prod-unico-ref .line-submit input {
+	padding: 3px 10px
+}
+.prod-unico-ordenacao {
+	background: #f3f3f3
+}
+.prod-unico-ordenacao .active {
+	background: #d5d5d5
+}
+.prod-unico-ordenacao .bt-compare {
+	background-position: 0 -65px;
+	width: 84px;
+	height: 0;
+	padding-top: 37px
+}
+.prod-unico-ordenacao .bt-compare.es, .prod-unico-ordenacao .bt-compare.es_AR {
+	background-position: -84px -65px
+}
+.prod-unico-ordenacao .compare, .prod-unico-ordenacao .preco, .prod-unico-ordenacao .populares {
+	text-align: center
+}
+.prod-unico-ordenacao .produto, .prod-unico-ordenacao .preco, .prod-unico-ordenacao .populares {
+	height: 30px;
+	padding: 18px 0 4px
+}
+.prod-unico-ordenacao .lastUnit {
+	height: 52px
+}
+.prod-unico-ordenacao .produto {
+	padding: 18px 10px 4px;
+	text-align: center
+}
+.prod-unico-ordenacao .compare {
+	padding: 0 0 0 10px;
+	margin-right: 5px;
+	width: 85px;
+	float: left
+}
+#proc-unico-tabs {
+	margin-bottom: 20px;
+	position: relative
+}
+.avaliacao-opiniao .aspectos, .avaliacao-opiniao .opiniao, .avaliacao-loja-opcoes, .avaliacao-loja-resumo, .avaliacao-loja-total, .avaliacao-loja-filtro, .avaliacao-opiniao .usuario, .avaliacao-loja-resumo {
+	margin-bottom: 15px
+}
+.avaliacao-loja-total {
+	padding: 0 10px;
+	font-weight: bold
+}
+.avaliacao-loja-vazio {
+	padding: 10px 0;
+	text-align: center;
+	font-weight: bold
+}
+.avaliacao-loja-resumo table {
+	margin: 0 auto;
+	width: 500px
+}
+.avaliacao-loja-resumo th {
+	width: 25%;
+	text-align: center
+}
+.avaliacao-loja-filtro a, .avaliacao-loja-filtro span {
+	margin-left: 10px
+}
+.avaliacao-loja-opcoes {
+	border: 2px solid #e6e6e6;
+	padding: 10px 10px 5px
+}
+.avaliacao-loja-opcoes a, .avaliacao-loja-opcoes span {
+	display: block;
+	margin-bottom: 5px;
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) -54px -178px no-repeat;
+	padding-left: 10px
+}
+.avaliacao-ordenacao {
+	background: #f3f3f3
+}
+.avaliacao-ordenacao .unit div {
+	padding: 10px
+}
+.avaliacao-ordenacao .active {
+	background: #d5d5d5
+}
+.avaliacao-ordenacao .active span {
+	background: url(http://imagem.buscape.com.br/bp5/stp2.gif) center right no-repeat;
+	padding-right: 15px
+}
+.avaliacao-ordenacao a {
+	background: url(http://imagem.buscape.com.br/bp5/stp.gif) center right no-repeat;
+	padding-right: 15px
+}
+.avaliacao-ordenacao .data {
+	text-align: right
+}
+.aba-ordenacao, .prod-unico-ordenacao {
+	background: #f3f3f3;
+	padding: 10px 0;
+	border-radius: 10px 10px 10px 10px
+}
+.aba-ordenacao .col2 {
+	text-align: center
+}
+.aba-ordenacao .imagem-descricao p {
+	padding: 10px
+}
+.aba-ordenacao .loja-abrir {
+	width: 150px
+}
+.aba-ordenacao .loja-abrir a {
+	margin: 0 auto
+}
+.prod-unico {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 10px 0
+}
+.prod-unico .produto-patrocinado, .prod-unico .produto-patrocinado a {
+	color: #c00;
+	font-size: 11px
+}
+.prod-unico .compare, .prod-unico .imagem {
+	float: left
+}
+.prod-unico .compare {
+	width: 85px;
+	text-align: center;
+	margin-right: 5px
+}
+.prod-unico .compare label {
+	display: block
+}
+.prod-unico .imagem {
+	margin-right: 16px;
+	text-align: center
+}
+.prod-unico .compare, .prod-unico .preco, .prod-unico .compare-abrir {
+	text-align: center;
+	padding-top: 30px
+}
+.prod-unico .descricao p {
+	margin-bottom: 3px
+}
+.prod-unico .descricao {
+	float: left;
+	width: 45%
+}
+.prod-unico .descricao p {
+	float: left;
+	width: 100%
+}
+.prod-unico .descricao .tituloProduto {
+	margin-bottom: 10px
+}
+.prod-unico .descricao .avaliacaoEstrelas {
+	display: inline-block;
+	margin-bottom: 20px
+}
+.prod-unico .caracProduto {
+	font-size: 11px;
+	color: #2d2d2d;
+	float: left;
+	margin-left: 0
+}
+.prod-unico .preco a {
+	font-size: 15px;
+	font-weight: bold;
+	display: block
+}
+.comp-prod-filtro, #comp-prod {
+	margin-bottom: 15px
+}
+#comp-prod {
+	width: 100%
+}
+#comp-prod td, #comp-prod th {
+	border-bottom: 1px solid #ccc
+}
+#comp-prod td {
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	padding: 5px 0
+}
+#comp-prod td p {
+	margin-bottom: 5px
+}
+#comp-prod .comp-prod-titulo {
+	vertical-align: top
+}
+#comp-prod .comp-prod-titulo strong {
+	display: block;
+	background: #e6e6e6 url(http://imagem.buscape.com.br/bp5/sta.gif) no-repeat top right;
+	padding: 3px 15px 2px 10px;
+	margin-bottom: 5px
+}
+#comp-prod .comp-prod-preco .preco {
+	display: block;
+	font-size: 16px;
+	font-weight: bold
+}
+.comp-prod-filtro a {
+	display: inline-block;
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) left -112px no-repeat;
+	padding-left: 10px;
+	margin-left: 20px
+}
+#comp-prod .bt-compare {
+	margin: 0 auto
+}
+#ofertas {
+	margin-bottom: 20px
+}
+#linha4 {
+	text-align: center;
+	padding: 30px 0;
+	border-bottom: solid 1px #ccc
+}
+.oferta {
+	border-bottom: solid 1px #ccc;
+	overflow: hidden;
+	padding: 10px
+}
+.oferta .avaliacao-nota {
+	margin: 0 auto
+}
+.oferta .loja, .oferta .avaliacao, .oferta .preco, .oferta .parcelas, .oferta .loja-abrir {
+	text-align: center;
+	padding-top: 15px
+}
+.oferta .loja-abrir {
+	width: 145px
+}
+.oferta .loja-abrir a {
+	margin: 0 auto
+}
+.oferta .imagem {
+	width: 100px;
+	text-align: center;
+	margin-right: 10px
+}
+.oferta .descricao {
+	padding-right: 10px
+}
+.oferta .descricao p {
+	margin-bottom: 3px
+}
+.oferta .preco {
+	white-space: nowrap
+}
+.oferta .preco a {
+	font-size: 18px;
+	font-weight: bold;
+	display: inline
+}
+.oferta .preco span.asterisco {
+	font-size: 10px;
+	display: inline
+}
+.oferta .preco a.precoInternacional {
+	font-size: 11px;
+	font-weight: normal
+}
+.oferta .parcelas small {
+	display: block;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 3px
+}
+.oferta .parcelas small a {
+	color: #c00
+}
+.oferta .parcelas strong {
+	display: block;
+	color: #999
+}
+.oferta .loja-abrir p {
+	margin-bottom: 5px
+}
+#resultados_mistos .hd {
+	background: url(http://imagem.buscape.com.br/bp6/deg-mista.png) repeat-x
+}
+#resultados_mistos .hd .inner {
+	background: url(http://imagem.buscape.com.br/bp6/seta-mista.png) no-repeat 10px center;
+	height: 40px;
+	padding: 10px 10px 10px 70px
+}
+#resultados_mistos .hd .inner strong {
+	color: #c00
+}
+#resultados_mistos .oferta {
+	background: 0;
+	border: 0
+}
+#resultados_mistos .oferta a {
+	color: #000
+}
+#resultados_mistos .oferta .loja {
+	margin-top: 3px;
+	padding: 0
+}
+#resultados_mistos .oferta .preco {
+	display: block;
+	padding: 0;
+	text-align: center
+}
+.paginacao {
+	clear: left
+}
+.paginacao ul {
+	background-color: #f7f7f7;
+	margin: 15px 0 10px;
+	padding: 15px 0;
+	text-align: center;
+	width: 100%;
+	border-radius: 10px
+}
+.paginacao li.ativo {
+	background-color: #a1a1a1;
+	color: #fff;
+	padding: 5px
+}
+.paginacao li {
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 6px 0 0;
+	overflow: auto;
+	padding: 0;
+	text-align: center
+}
+.paginacao li a {
+	border: 1px solid #dfdfdf;
+	padding: 5px
+}
+#linha4 .linha4-item {
+	background: url("http://imagem.buscape.com.br/bp5/bg_linha_2.png") no-repeat scroll 0 0 transparent;
+	display: inline;
+	margin: 0 30px;
+	padding: 24px 6px 6px;
+	text-align: center
+}
+#linha4 .linha4-item .linha4PopOver {
+	display: none
+}
+#cprocura ul li small {
+	font-size: 11px;
+	margin-left: 10px
+}
+#cprocura ul li a.categoria {
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) 4px -113px no-repeat;
+	padding-left: 15px
+}
+#opiniao-produto h3 {
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+#opiniao-produto .tabs {
+	margin-bottom: 20px
+}
+#opiniao-loja h2 {
+	background: #e6e6e6;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+#avaliacao-loja-aspectos {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 500px
+}
+#avaliacao-loja-aspectos li {
+	overflow: hidden;
+	clear: both;
+	padding: 5px;
+	border-bottom: 1px solid #e6e6e6
+}
+#avaliacao-loja-aspectos .aspecto-nome {
+	display: block;
+	float: left;
+	width: 375px
+}
+#opiniao-loja #avaliacao-opiniao-voto {
+	background: #f5f5f5;
+	padding: 10px
+}
+#opiniao-loja #avaliacao-opiniao-voto h3 {
+	float: left;
+	width: 200px;
+	padding-top: 3px
+}
+#opiniao-loja #avaliacao-opiniao-voto input {
+	margin: 0 5px
+}
+#opiniao-loja #opiniao-voto-sucesso, #opiniao-loja #opiniao-voto-erro {
+	display: none;
+	font-size: 16px;
+	font-weight: bold
+}
+#avaliacao-loja .tabs {
+	margin-bottom: 20px
+}
+.avaliacao-opiniao {
+	padding: 20px 0
+}
+.avaliacao-opiniao p {
+	margin-bottom: 10px
+}
+.avaliacao-opiniao .aspectos li {
+	overflow: hidden;
+	clear: both;
+	padding: 5px
+}
+.avaliacao-opiniao .aspectos .aspecto-nome {
+	display: block;
+	float: left;
+	width: 120px
+}
+.avaliacao-opiniao .publicado-em, .avaliacao-produto-ordenacao .publicado-em {
+	text-align: right
+}
+.avaliacao-opiniao .opiniao .mais {
+	display: block;
+	background: url(http://imagem.buscape.com.br/skin40/sprite_icons.gif) 0 -112px no-repeat;
+	padding-left: 10px;
+	margin-top: 5px
+}
+.avaliacao-resumo {
+	border: 1px solid #e2e2e2
+}
+.avaliacao-resumo th, .avaliacao-resumo td {
+	padding: 4px
+}
+.avaliacao-resumo th {
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #e2e2e2;
+	font-weight: bold
+}
+.avaliacao-resumo td {
+	text-align: center
+}
+.avaliacao-resumo .positivo {
+	text-align: center
+}
+#opiniao-produto .avaliacao-opiniao-voto {
+	text-align: center;
+	border-bottom: 1px dashed #999;
+	padding: 20px 0
+}
+#opiniao-produto #opiniao-voto-sucesso, #opiniao-produto #opiniao-voto-erro {
+	display: none;
+	font-size: 16px;
+	font-weight: bold
+}
+#opiniao-produto .avaliacao-opiniao-voto h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px
+}
+#opiniao-produto .avaliacao-opiniao-voto input {
+	margin: 0 5px;
+	font-size: 14px
+}
+#avaliacao-produto-opinioes .avaliacao-opiniao, #avaliacao-loja-opinioes .avaliacao-opiniao {
+	border-bottom: 1px dashed #999
+}
+.avaliacao-produto-resumo {
+	margin-bottom: 20px
+}
+.avaliacao-produto-resumo .aspectos {
+	width: 500px;
+	margin: 0 auto
+}
+.avaliacao-produto-resumo .aspectos li {
+	overflow: hidden;
+	clear: both;
+	padding: 5px;
+	border-bottom: 1px solid #e6e6e6
+}
+.avaliacao-produto-resumo .aspectos .aspecto-nome {
+	display: block;
+	float: left;
+	width: 345px
+}
+#avaliacao-sem-opiniao {
+	text-align: center;
+	padding: 20px 0
+}
+.avaliacao-produto-filtro {
+	margin-bottom: 20px
+}
+#sinonimos-opcoes, #sinonimos-busca {
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 20px;
+	margin-top: 20px
+}
+#sinonimos-busca form {
+	margin-top: 20px
+}
+#sinonimos-busca form strong {
+	width: 80px;
+	display: block;
+	float: left
+}
+#sinonimos-busca input {
+	margin-right: 10px
+}
+#filtros {
+	float: left;
+	position: relative;
+	border-right: 1px solid #e6e6e6;
+	text-align: left;
+	margin: 0 15px 20px 0;
+	display: inline
+}
+#filtros .filtros-hd p {
+	padding: 6px
+}
+#filtros .filtros-bd {
+	padding: 0 10px
+}
+#filtros h3 {
+	font-weight: bold;
+	font-size: 12px
+}
+#filtros img {
+	vertical-align: bottom
+}
+#filtros .filtros-titulo {
+	background-color: #0166dc;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px
+}
+#filtros .filtros-stats {
+	text-align: center;
+	padding: 9px 0
+}
+#filtros .filtros-tipo {
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 4px 0;
+	text-align: center
+}
+#filtros .filtros-basico {
+	border-right: 1px solid black;
+	padding: 0 4px 0 0
+}
+#filtros .filtros-super {
+	padding: 0 0 0 4px
+}
+#filtros .filtros-stats strong {
+	color: #c00;
+	font-size: 20px;
+	font-weight: bold
+}
+#filtros .filtros-inner {
+	border: 1px solid #adadad;
+	width: 190px
+}
+#filtros .filtro, #filtros .info {
+	border-bottom: 1px dashed #cccccd;
+	padding: 7px 0 10px
+}
+#filtros .info p {
+	padding: 4px 0
+}
+#filtros h3 {
+	background: url(http://image.buscape.com/sprite_icons_18.gif) no-repeat scroll 0 -416px transparent;
+	padding-left: 15px;
+	cursor: pointer
+}
+#filtros li small {
+	font-size: 11px
+}
+#filtros .closed h3 {
+	background-position: 0 -446px
+}
+#filtros .closed .filtro-bd {
+	display: none
+}
+#filtros .last {
+	border-bottom: 0
+}
+#filtros .filtros-selecionados li {
+	background: url(http://imagem.buscape.com.br/bp5/zera_result.gif) left center no-repeat;
+	padding-left: 20px
+}
+.filtro-icon-oro, .filtro-icon-diamante, .filtro-icon-bronce, .filtro-icon-plata, .filtro-icon-conf, .filtro-icon-remove, .filtro-icon-pd {
+	background: url(http://image.buscape.com/sprite_icons_18.gif) no-repeat;
+	padding-left: 20px!important
+}
+.sprite-icon-diamante {
+	background-position: 0 0
+}
+.filtro-icon-oro {
+	background-position: 0 -29px
+}
+.filtro-icon-bronce {
+	background-position: 0 -112px
+}
+.filtro-icon-plata {
+	background-position: 0 -70px
+}
+.filtro-icon-conf {
+	background-position: 0 -192px
+}
+.filtro-icon-remove {
+	background-position: 0 -382px
+}
+.filtro-icon-pd {
+	background-position: 0 -149px
+}
+.filtro .filtro-completo {
+	height: 120px;
+	overflow: auto
+}
+.filtro .filtro-mais {
+	display: none
+}
+.filtro .filtro-bd {
+	margin-top: 5px
+}
+.filtro li {
+	line-height: 17px;
+	clear: both;
+	overflow: hidden
+}
+.filtro #kw, .filtro .textkw {
+	width: 100px;
+	padding: 2px;
+	margin-right: 5px
+}
+.filtro .mais {
+	color: #009
+}
+.filtro .mais:hover {
+	text-decoration: underline;
+	cursor: pointer
+}
+#resultados {
+	overflow: hidden;
+	_zoom: 1
+}
+.resultados-vazio {
+	text-align: center;
+	font-size: 16px;
+	padding: 20px 0
+}
+#empresa-endereco .tabs {
+	margin-bottom: 20px
+}
+#empresa-endereco .without_results {
+	font-size: 13px
+}
+.endereco-mod {
+	border-bottom: 1px solid #fc3;
+	margin-bottom: 15px;
+	padding-bottom: 15px
+}
+.endereco-mod .hd {
+	margin-bottom: 20px
+}
+.endereco-mod .hd h3 {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 10px
+}
+#endereco-info {
+	background: #f4f4f4;
+	margin-bottom: 15px
+}
+#endereco-info h1 {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase
+}
+#endereco-info p {
+	margin-bottom: 10px
+}
+#endereco-info li {
+	margin-bottom: 5px
+}
+#endereco-info li strong {
+	width: 100px;
+	display: block;
+	float: left
+}
+#endereco-info .logo {
+	float: left;
+	margin-right: 10px
+}
+#endereco-info .desde {
+	color: #7a7a7a;
+	font-size: 11px
+}
+#endereco-info .desde span {
+	display: block
+}
+#endereco-info .inner {
+	padding: 10px
+}
+#endereco-info .col2 {
+	height: 150px;
+	background: #e9e9e9
+}
+#endereco-info .col2 .inner {
+	padding-left: 20px
+}
+#endereco-reputacao {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	text-align: right
+}
+#endereco-mais {
+	padding: 0 5px
+}
+#endereco-mais .endereco-mais {
+	display: none
+}
+#endereco-mais ul li {
+	list-style-position: inside;
+	list-style-type: disc;
+	padding: 5px 10px
+}
+#endereco-mais ul .even {
+	background: #f1f1f1
+}
+#endereco-mais .endereco-nome {
+	display: inline;
+	text-transform: uppercase;
+	font-weight: bold
+}
+.endereco-mod .endereco-rota {
+	text-align: right
+}
+#endereco-mapa #endereco-mapa-exibe {
+	width: 100%!important;
+	height: 330px
+}
+#endereco-mapa {
+	height: 400px
+}
+#endereco-mapa-enderecos table {
+	width: 100%
+}
+#endereco-mapa-enderecos td {
+	padding: 0
+}
+#endereco-mapa-enderecos table td {
+	padding: 5px
+}
+#endereco-rota-destino {
+	border-bottom: 1px solid #acacac;
+	padding-bottom: 10px;
+	margin: 0 20px 10px 0
+}
+#endereco-rota-origem .endereco {
+	margin-bottom: 20px
+}
+#endereco-rota-origem h2 {
+	font-weight: bold;
+	margin-bottom: 10px
+}
+#endereco-rota-origem .field {
+	margin-bottom: 5px
+}
+#endereco-rota-origem label {
+	display: block;
+	color: #666;
+	display: block;
+	font-size: 11px
+}
+#endereco-mapa-enderecos .odd {
+	background: #f5f5f5
+}
+#endereco-rota-origem .StCombo, #endereco-rota-origem .field-endereco {
+	width: 200px
+}
+#endereco-rota-origem .field-numero {
+	width: 50px
+}
+#prod_ref_p_s {
+	border: 1px solid #adadad;
+	margin-bottom: 10px
+}
+.refine {
+	background-color: #fff;
+	border-bottom: 1px dashed #adadad;
+	height: 22px;
+	text-align: left;
+	vertical-align: middle;
+	width: 100%
+}
+.tbb {
+	display: block;
+	padding-top: 3px
+}
+#container_cotacao {
+	margin-top: 40px;
+	overflow: hidden;
+	width: 100%
+}
+#container_cotacao #cotacao_out {
+	border-bottom: 2px solid #ebebeb;
+	border-right: 2px solid #ebebeb;
+	float: right;
+	width: 50%
+}
+#container_cotacao #cotacao_in {
+	border: 1px solid #aaa;
+	padding: 8px;
+	font-size: 13px;
+	line-height: 16px
+}
+#container_cotacao #cotacao_out #info_paises {
+	padding: 10px 0;
+	text-align: center
+}
+#container_cotacao #cotacao_out #info_paises li {
+	display: inline;
+	margin: 0 5px 0 0
+}
+.fonte-info {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal;
+	float: right
+}
+.legend {
+	font-size: 10px;
+	line-height: 12px;
+	clear: both
+}
+.service_position {
+	background-color: #060;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 1px 0!important;
+	text-align: center;
+	width: 55px
+}
+.service_pointer {
+	background: url("http://imagem.buscape.com.br/bp6/st_n.gif") no-repeat scroll 0 0 transparent;
+	height: 11px;
+	margin: 0 auto;
+	width: 24px
+}
+.servicos-imagem {
+	float: none;
+	margin: 0 auto;
+	text-align: center
+}
+.servicos-imagem a {
+	font-size: 11px;
+	font-weight: normal;
+	color: #666
+}
+.servicos-links {
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px;
+	padding-right: 5px;
+	text-align: right
+}
+.servicos-empresa {
+	padding: 0 0 2px 0
+}
+.servicos-nome-empresa {
+	font-size: 14px;
+	font-weight: bold
+}
+.servicos-avaliacao-empresa {
+	font-size: 11px
+}
+.servicos-telefone {
+	padding: 4px 0 0 0
+}
+.servicos-telefone-link {
+	background: url("http://imagem.buscape.com.br/bp5/buttonsbp.png") no-repeat scroll 0 -774px transparent;
+	text-indent: 15px
+}
+.servicos-telefone-link a {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal
+}
+.servicos-info a, .servicos-info, .store_info {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px
+}
+.txtTermo {
+	padding: 21px 0 0
+}
+.txtTermo a {
+	color: #000
+}
+.boxMenu .rightCol {
+	float: right;
+	width: 300px
+}
+.boxSelos, .boxPrecos {
+	padding: 9px 0 8px
+}
+.boxPrecos a {
+	font-size: 18px;
+	font-weight: bold;
+	display: inline
+}
+#boxMenuCategorias {
+	float: Left
+}
+#boxMenuCategorias h2 {
+	color: #282828;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 15px
+}
+#boxMenuCategorias ul {
+	background: #e9e9e9;
+	padding: 15px 10px;
+	border-radius: 5px 5px 5px 5px;
+	float: Left;
+	margin-right: 12px;
+	width: 200px
+}
+#boxMenuCategorias ul li {
+	padding: 0 0 15px 0
+}
+#boxMenuCategorias ul li h3 {
+	font-size: 12px;
+	color: #282828;
+	font-weight: bold
+}
+#boxMenuCategorias ul li h3 a {
+	color: #282828;
+	background: none!important;
+	padding: 0!important
+}
+#boxMenuCategorias ul li p {
+	font-size: 12px;
+	color: #757575
+}
+#boxMenuCategorias ul li p a {
+	color: #282828
+}
+#resultados .listaThumbCategorias {
+	width: 100%
+}
+#resultados .listaThumbCategorias li {
+	float: left;
+	width: 20%;
+*width:19%;
+	border: 0
+}
+#resultados .listaThumbCategorias li .boxImg {
+	background: none repeat scroll 0 0 #e9e9e9;
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 auto;
+	padding: 4px 5px;
+	width: 100px
+}
+#resultados .listaThumbCategorias li img {
+	padding: 15px;
+	background: none repeat scroll 0 0 #fff
+}
+#resultados .listaThumbCategorias li h3 {
+	color: #417ffd;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center
+}
+#resultados .listaThumbCategorias li h3 a {
+	color: #417ffd;
+	background: 0;
+	padding: 0
+}
+#resultados .listProdutosCategorias {
+	width: 100%
+}
+#resultados .listProdutosCategorias>div {
+	width: 100%;
+	float: Left;
+	border: 0
+}
+#resultados .listProdutosCategorias .boxTitulo {
+	background: none repeat scroll 0 0 #e9e9e9;
+	overflow: hidden;
+	padding: 10px;
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 0 10px 0
+}
+#resultados .listProdutosCategorias .boxTitulo h2 {
+	font-size: 18px;
+	color: #5a5a5a;
+	float: Left;
+	padding: 2px 0 0
+}
+#resultados .listProdutosCategorias .boxTitulo h2 a {
+	color: #5a5a5a;
+	background: 0;
+	padding: 0
+}
+#resultados .listProdutosCategorias .boxTitulo h2 a:hover {
+	text-decoration: underline
+}
+#resultados .listProdutosCategorias .boxTitulo span {
+	background: url("http://imagem.buscape.com.br//parceiros/skin40_default/bgBtResultados.gif") no-repeat scroll 0;
+	font-size: 12px;
+	color: #FFF;
+	float: right;
+	padding: 5px 5px 6px;
+	font-weight: bold;
+	text-align: center;
+	width: 160px
+}
+#resultados .listProdutosCategorias .boxTitulo span a {
+	color: #FFF
+}
+#resultados .listProdutosCategorias .boxItem .tituloProduto {
+	color: #000;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 7px;
+	margin-right: 285px
+}
+#resultados .listProdutosCategorias .boxItem .tituloProduto a {
+	color: #000
+}
+#resultados .listProdutosCategorias .boxItem .caracProduto li {
+	border: 0
+}
+#cprocura #resultados .listProdutosCategorias .boxItem li.oferta .descricao p a {
+	color: #000;
+	font-size: 14px
+}
+#cprocura #resultados .listProdutosCategorias .boxItem li.oferta .loja, #cprocura #resultados .listProdutosCategorias .boxItem li.oferta .loja a {
+	font-size: 10px
+}
+.cat-mais-procuradas, .cat-mais-procuradas .hd {
+	background-color: #fff;
+	margin-bottom: 20px
+}
+.cat-titulo {
+	font-size: 24px;
+	font-weight: bold
+}
+.cat-titulo span {
+	display: block;
+	font-size: 15px;
+	font-weight: normal
+}
+.cat-mais-procuradas .bd {
+	overflow: hidden;
+	height: auto;
+	margin-bottom: 20px;
+	border: 1px solid #f3f3f3;
+	border-width: 3px 1px 1px;
+	padding: 30px
+}
+.cat-mais-procuradas .cat-destaque {
+	text-align: center;
+	display: block;
+	height: auto;
+	margin-bottom: 50px
+}
+.cat-destaque .cat-item {
+	border-right: 1px solid #eaeaea
+}
+.cat-destaque .cat-item.lastUnit {
+	border-right: 0 none
+}
+.cat-destaque .cat-item a {
+	color: #fff
+}
+.cat-destaque .cat-item a:hover {
+	text-decoration: none
+}
+.cat-destaque .cat-item img {
+	display: block;
+	margin: 0 auto;
+	width: 70px;
+	height: 70px
+}
+.cat-destaque .cat-item-title {
+	display: block;
+	color: #282828;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	margin: 15px 0 10px;
+	min-height: 30px
+}
+.cat-destaque .pr-btn {
+	width: 100px;
+	margin: 10px auto 0
+}
+.lista-1 {
+	margin-right: 30px
+}
+.categoria-pai {
+	border-bottom: 1px solid #f3f3f3
+}
+.categoria-pai a {
+	color: #282828;
+	display: inline-block;
+	font-size: 12px;
+	min-height: 16px;
+	padding: 13px 0
+}
+#todas-categorias {
+	display: none
+}
+.pr-btn {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	text-decoration: none!important;
+	border: 0 none
+}
+.pr-btn .inner {
+	background-color: #fff;
+	cursor: pointer;
+	display: block;
+	text-decoration: none!important
+}
+.pr-btn input {
+	border: 0;
+	text-align: center
+}
+.pr-btn .red {
+	background-image: url(http://image.buscape.com/bui-bp7/sprite-buttons.png);
+	background-position: left top;
+	color: #fff;
+	margin: 0 auto;
+	max-width: 235px
+}
+.red .inner {
+	background-image: url(http://image.buscape.com/bui-bp7/sprite-buttons.png);
+	background-position: right top;
+	cursor: pointer;
+	display: block;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.red .input {
+	color: #fff
+}
+.pr-btn.red.small {
+	background-image: url(http://image.buscape.com/bui-bp7/sprite-buttons.png);
+	background-position: 0 -362px
+}
+.small .inner {
+	background-image: url(http://image.buscape.com/bui-bp7/sprite-buttons.png);
+	background-position: right -362px;
+	font-size: 11px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 10px;
+	padding-left: 4px;
+	text-align: center
+}
+.aba-ordenacao select, .prod-unico-ordenacao select {
+	padding: 5px;
+	width: 185px
+}
+.titulo_erro {
+	color: #282828;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 0 25px;
+	display: block;
+	width: 100%
+}
+.error_container {
+	display: block;
+	width: 100%;
+	height: 200px;
+	border-bottom: 1px solid #ccc
+}
+a.listar_categorias {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #ed1c24
+}
+body {
+	font: 12px Arial, Helvetica, sans-serif
+}
+.bd {
+	width: auto
+}
+a, button {
+	text-decoration: none;
+	outline-width: 0
+}
+a:hover {
+	text-decoration: underline
+}
+input {
+	vertical-align: middle
+}
+.hide {
+	display: none
+}
+input::-webkit-input-placeholder {
+color:#cbcbcb!important
+}
+input:-moz-placeholder {
+color:#cbcbcb!important
+}
+input.placeholderOn {
+	color: #cbcbcb!important
+}
+.bp_elastic_content {
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 1200px;
+	overflow: hidden
+}
+#wrapper {
+	min-width: 980px
+}
+#bp_page_title {
+	color: #757575;
+	font-size: 20px
+}
+#bp_page_title .highlight {
+	display: inline;
+	color: #282828;
+	font-weight: bold
+}
+#bp_page_title a {
+	color: #417ffd
+}
+#bp_page_title h1, #bp_page_title h2 {
+	display: inline;
+	font-weight: bold
+}
+#bp_page_title .filter_link_procura {
+	background: url(http://imagem.buscape.com.br/bp5/mais2.gif) no-repeat 7px 7px;
+	display: inline-block;
+	padding-left: 24px;
+	margin-left: 5px
+}
+#bp_page_title .filter_link {
+	background: url(http://imagem.buscape.com.br/bp5/mais2.gif) no-repeat right 7px;
+	padding-right: 20px;
+	margin-right: 10px
+}
+#bp_page_title .filter_link.without_content {
+	padding-right: 15px
+}
+.bp_page_subtitle {
+	color: #757575;
+	font-size: 12px
+}
+.bp_page_subtitle .highlight {
+	color: #417ffd
+}
+.bp_page_subtitle a {
+	color: #417ffd;
+	font-size: 14px;
+	font-weight: bold
+}
+.main_simple_heading {
+	background: #e9e9e9;
+	overflow: hidden;
+	padding: 10px
+}
+.main_simple_heading .text {
+	float: left;
+	font-size: 18px;
+	max-width: 80%
+}
+.main_simple_heading .text, .main_simple_heading a.text, .main_simple_heading .text a {
+	color: #5a5a5a
+}
+.main_simple_heading .add_button {
+	width: auto
+}
+.main_simple_heading .add_button .bp_btn_low_priority {
+	max-width: none
+}
+.main_simple_heading.eco_product {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos-eco.png) no-repeat -45px 3px #e9f7e8;
+	color: #008641;
+	padding-left: 50px!important
+}
+.main_simple_heading.eco_product, .main_simple_heading.eco_product .text {
+	color: #008641
+}
+#bp_autocomplete {
+	background: #fff;
+	border: solid 2px #e9e9e9;
+	border-top-width: 1px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin-left: 20px;
+	position: absolute!important;
+	top: 51px;
+	float: left;
+	z-index: 3;
+	width: 395px;
+	overflow: hidden
+}
+#bp_autocomplete .autocomplete_inner {
+	padding: 15px;
+	text-align: left;
+	overflow: hidden
+}
+#bp_autocomplete .hd {
+	color: #757575;
+	cursor: default;
+	font-size: 11px;
+	padding-bottom: 15px
+}
+#bp_autocomplete .hd .close {
+	color: #d1d1d1;
+	font-size: 10px;
+	float: right
+}
+#bp_autocomplete .bd {
+	font-size: 12px;
+	line-height: 17px;
+	height: auto!important;
+	width: auto!important
+}
+#bp_autocomplete .bd a {
+	color: #417ffd;
+	display: block;
+	padding: 3px
+}
+#bp_autocomplete .bd .autocompleteativo a {
+	color: #fff;
+	background: #417ffd;
+	text-decoration: none
+}
+#bp_autocomplete .bd a strong {
+	font-weight: bold
+}
+.rounded_corner {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position: relative
+}
+.rounded_corner.radius3 {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px
+}
+.rounded_corner.radius10 {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px
+}
+.rounded_corner.radius15 {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px
+}
+.rounded_corner.radius20 {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px
+}
+.rounded_corner.radius30 {
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px
+}
+.rounded_corner .tl_corner, .rounded_corner .tr_corner, .rounded_corner .bl_corner, .rounded_corner .br_corner {
+	display: none
+}
+html.no-borderradius .rounded_corner .tl_corner, html.no-borderradius .rounded_corner .tr_corner, html.no-borderradius .rounded_corner .bl_corner, html.no-borderradius .rounded_corner .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-5.png) no-repeat;
+	display: block;
+	height: 5px;
+	position: absolute;
+	width: 5px
+}
+html.no-borderradius .radius3 .tl_corner, html.no-borderradius .radius3 .tr_corner, html.no-borderradius .radius3 .bl_corner, html.no-borderradius .radius3 .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-3.png) no-repeat;
+	height: 3px;
+	width: 3px
+}
+html.no-borderradius .radius10 .tl_corner, html.no-borderradius .radius10 .tr_corner, html.no-borderradius .radius10 .bl_corner, html.no-borderradius .radius10 .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-10.png) no-repeat;
+	height: 10px;
+	width: 10px
+}
+html.no-borderradius .radius15 .tl_corner, html.no-borderradius .radius15 .tr_corner, html.no-borderradius .radius15 .bl_corner, html.no-borderradius .radius15 .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-15.png) no-repeat;
+	height: 15px;
+	width: 15px
+}
+html.no-borderradius .radius20 .tl_corner, html.no-borderradius .radius20 .tr_corner, html.no-borderradius .radius20 .bl_corner, html.no-borderradius .radius20 .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-20.png) no-repeat;
+	height: 20px;
+	width: 20px
+}
+html.no-borderradius .rounded_corner .tl_corner {
+	background-position: left top;
+	left: 0;
+	top: 0
+}
+html.no-borderradius .rounded_corner .tr_corner {
+	background-position: right top;
+	right: 0;
+	top: 0
+}
+html.no-borderradius .rounded_corner .bl_corner {
+	background-position: left bottom;
+	left: 0;
+	bottom: 0
+}
+html.no-borderradius .rounded_corner .br_corner {
+	background-position: right bottom;
+	right: 0;
+	bottom: 0
+}
+.breadcrumbs {
+	text-align: left
+}
+.breadcrumbs, .breadcrumbs a {
+	color: #282828!important
+}
+.breadcrumbs .next {
+	padding: 0 5px
+}
+.breadcrumbs .active {
+	color: #858585!important
+}
+.bp_mod_ads {
+	color: #b2b2b2;
+	font-size: 11px;
+	font-weight: normal;
+	position: relative
+}
+.bp_mod_ads .info {
+	display: none
+}
+.bp_mod_ads.super728x90 {
+	margin: 0 auto 25px auto;
+	padding-right: 60px;
+	width: 728px;
+	height: 90px
+}
+.bp_mod_ads.super728x90 .info {
+	bottom: 0;
+	left: 735px;
+	position: absolute
+}
+.bp_mod_ads.square300x250 {
+	height: 250px;
+	padding-bottom: 15px;
+	width: 300px
+}
+.bp_mod_ads.square300x250 .info {
+	bottom: 0;
+	right: 0;
+	position: absolute
+}
+.bp_mod_ads #OAS_Top {
+	width: 728px;
+	height: 90px
+}
+.bp_mod_ads #OAS_TopRight {
+	height: 250px;
+	width: 300px
+}
+.bp_mod_share_this {
+	color: #757575;
+	font-size: 11px;
+	font-weight: bold;
+	width: auto;
+	display: none
+}
+.bp_mod_share_this .hd, .bp_mod_share_this .bd {
+	float: left
+}
+.bp_mod_share_this .hd {
+	line-height: 20px;
+	padding-right: 5px
+}
+.bp_mod_share_this .item {
+	background: url(http://image.buscape.com/bui-bp7/sprite-share-channels.png) no-repeat;
+	float: left;
+	display: inline;
+	height: 21px;
+	margin-right: 5px;
+	text-indent: -9999px;
+	width: 21px
+}
+.bp_mod_share_this .twitter {
+	background-position: -289px 0
+}
+.bp_mod_share_this .facebook {
+	background-position: -259px -30px
+}
+.bp_mod_share_this .orkut {
+	background-position: -240px -60px
+}
+.bp_mod_share_this .email {
+	background-position: -209px -90px
+}
+.bp_mod_share_this .other {
+	background-position: -179px -120px
+}
+.bp_mod_share_this .bd a {
+	display: block;
+	height: 100%;
+	outline: 0;
+	overflow: hidden
+}
+.sprite_locale_ar, .sprite_locale_bo, .sprite_locale_br, .sprite_locale_cl, .sprite_locale_co, .sprite_locale_cr, .sprite_locale_do, .sprite_locale_ec, .sprite_locale_es, .sprite_locale_gt, .sprite_locale_hn, .sprite_locale_mx, .sprite_locale_ni, .sprite_locale_pa, .sprite_locale_pe, .sprite_locale_pr, .sprite_locale_pt, .sprite_locale_py, .sprite_locale_sv, .sprite_locale_us, .sprite_locale_uy, .sprite_locale_ve {
+	background: url(http://image.buscape.com/bui-bp7/sprite-flags-16.png) no-repeat
+}
+.sprite_locale_ar {
+	background-position: 0 0
+}
+.sprite_locale_bo {
+	background-position: 0 -21px
+}
+.sprite_locale_br {
+	background-position: 0 -42px
+}
+.sprite_locale_cl {
+	background-position: 0 -63px
+}
+.sprite_locale_co {
+	background-position: 0 -84px
+}
+.sprite_locale_cr {
+	background-position: 0 -105px
+}
+.sprite_locale_ec {
+	background-position: 0 -126px
+}
+.sprite_locale_sv {
+	background-position: 0 -147px
+}
+.sprite_locale_es {
+	background-position: 0 -168px
+}
+.sprite_locale_us {
+	background-position: 0 -189px
+}
+.sprite_locale_gt {
+	background-position: 0 -210px
+}
+.sprite_locale_hn {
+	background-position: 0 -231px
+}
+.sprite_locale_mx {
+	background-position: 0 -252px
+}
+.sprite_locale_ni {
+	background-position: 0 -273px
+}
+.sprite_locale_pa {
+	background-position: 0 -294px
+}
+.sprite_locale_py {
+	background-position: 0 -315px
+}
+.sprite_locale_pe {
+	background-position: 0 -336px
+}
+.sprite_locale_pr {
+	background-position: 0 -357px
+}
+.sprite_locale_pt {
+	background-position: 0 -378px
+}
+.sprite_locale_do {
+	background-position: 0 -399px
+}
+.sprite_locale_uy {
+	background-position: 0 -420px
+}
+.sprite_locale_ve {
+	background-position: 0 -441px
+}
+.sprite_icon_ebit_40, .sprite_icon_ebit_30, .sprite_icon_ebit_20, .sprite_icon_ebit_10, .sprite_icon_ebit_5, .sprite_icon_pd, .sprite_icon_po, .sprite_icon_rates, .sprite_icon_info_shop, .sprite_icon_operation_area, .sprite_icon_help, .sprite_icon_photo, .sprite_icon_video, .sprite_icon_protege {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat
+}
+.sprite_icon_ebit_40 {
+	background-position: left 4px
+}
+.sprite_icon_ebit_30 {
+	background-position: left -43px
+}
+.sprite_icon_ebit_20 {
+	background-position: left -91px
+}
+.sprite_icon_ebit_10 {
+	background-position: left -138px
+}
+.sprite_icon_ebit_5 {
+	background-position: left -184px
+}
+.sprite_icon_pd {
+	background-position: left -231px
+}
+.sprite_icon_po {
+	background-position: left -275px
+}
+.sprite_icon_help {
+	background-position: left -320px
+}
+.sprite_icon_rates {
+	background-position: left -361px
+}
+.sprite_icon_operation_area {
+	background-position: 2px -431px
+}
+.sprite_icon_info_shop {
+	background-position: 2px -487px
+}
+.sprite_icon_photo {
+	background-position: left -1030px
+}
+.sprite_icon_video {
+	background-position: left -1070px
+}
+.sprite_icon_protege {
+	background-position: 2px -1484px
+}
+.sprite_icon_protege.disabled {
+	background-position: 2px -1529px
+}
+.bp_mod_price {
+	background: #e9e9e9;
+	color: #757575
+}
+.bp_mod_price .hd {
+	background: #c3c3c3;
+	-moz-border-radius: 15px 15px 0 0;
+	-webkit-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+	color: #5a5a5a;
+	font-size: 11px;
+	padding: 5px 20px;
+	text-align: center
+}
+.bp_mod_price .hd a {
+	color: #5a5a5a
+}
+.bp_mod_price .hd .highlight {
+	font-size: 12px;
+	font-weight: bold
+}
+.bp_mod_price .bd, .bp_mod_price .ft {
+	padding: 15px 20px
+}
+.bp_mod_price .bd {
+	font-weight: bold;
+	padding-top: 15px;
+	font-size: 11px;
+	padding-bottom: 0;
+	text-align: right
+}
+.bp_mod_price .bd a {
+	color: #757575;
+	text-decoration: none
+}
+.bp_mod_price .bd a:hover .value {
+	text-decoration: underline
+}
+.bp_mod_price .ft {
+	padding-top: 15px;
+	padding-bottom: 20px
+}
+.bp_mod_price .new .value {
+	color: #417ffd
+}
+.bp_mod_price .used .value {
+	color: #7eb72b
+}
+.bp_mod_price .or {
+	background: url(http://image.buscape.com/bui-bp7/bg-mod-price-or.gif) repeat-x 0 11px;
+	color: #bdbdbd;
+	font-weight: normal;
+	line-height: 20px;
+	height: 20px;
+	margin: 10px 0 5px;
+	text-align: center
+}
+.bp_mod_price .or .content {
+	background: #e9e9e9;
+	padding: 0 5px
+}
+.bp_mod_price .pu .price_1 .value {
+	font-size: 14px
+}
+.bp_mod_price .pu .price_1 .value .integer {
+	font-size: 22px
+}
+.bp_mod_price .pu .price_1, .bp_mod_price .pu .price_2, .bp_mod_price .pu .used {
+	padding-right: 5px
+}
+.bp_mod_price .offer .price_1 {
+	text-align: center
+}
+.bp_mod_price .offer .price_1 .integer {
+	font-size: 22px
+}
+.bp_mod_price .offer .price_2 {
+	font-size: 11px;
+	text-align: left
+}
+.bp_mod_price .offer .price_2 .price_2_inner {
+	padding-left: 10px
+}
+.bp_mod_price .offer .price_2 .integer {
+	font-size: 12px
+}
+.bp_mod_price .offer .payments_info {
+	display: block
+}
+.bp_mod_price .pu .bd, .bp_mod_price .pu .ft {
+	padding-left: 25px;
+	padding-right: 25px
+}
+.bp_mod_price .offer .ft {
+	padding-left: 20px;
+	padding-right: 20px
+}
+.bp_mod_price .offer .bd {
+	padding-left: 15px;
+	padding-right: 15px
+}
+.bp_mod_price .unavailable_prod {
+	padding-bottom: 20px;
+	text-align: center
+}
+.bp_mod_price .unavailable_prod .message {
+	font-size: 13px
+}
+.bp_mod_price .unavailable_prod a {
+	color: #417ffd;
+	display: block;
+	padding-top: 15px
+}
+.bp_mod_price .ppc_phone {
+	color: #417ffd;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-align: center
+}
+.bp_mod_price .bp_btn_high_priority .inner {
+	background-color: #e9e9e9
+}
+.bp_mod_quotation, .bp_mod_jato {
+	border-top: 1px dotted #ebebeb;
+	border-bottom: 1px dotted #ebebeb;
+	color: #757575;
+	text-align: left;
+	padding: 20px 0 30px 0
+}
+.bp_mod_quotation {
+	text-align: right
+}
+.bp_mod_quotation .bd, .bp_mod_jato .bd {
+	font-size: 11px
+}
+.bp_mod_quotation .highlight {
+	color: #417ffd;
+	font-weight: bold
+}
+.bp_mod_jato img {
+	margin-top: 5px
+}
+.bp_mod_search, .bp_mod_search .mod_search_inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-forms.png) no-repeat 0 0 #ffcb05;
+	width: 535px
+}
+.bp_mod_search input, .bp_mod_search button {
+	border: 0
+}
+.bp_mod_search .mod_search_inner {
+	background-position: top right;
+	height: 38px;
+	margin-left: 20px
+}
+.bp_mod_search .ipt_text {
+	background: transparent;
+	color: #282828;
+	font-size: 15px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	padding: 9px 0 7px 0;
+	margin-top: 2px;
+	width: 355px;
+	outline-width: 0
+}
+.bp_mod_search .ipt_submit {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat 0 -37px;
+	cursor: pointer;
+	float: right;
+	height: 31px;
+	margin: 5px 5px 0 0;
+	text-indent: -9999px;
+	width: 78px
+}
+.bp_mod_search .ipt_submit:hover {
+	background-position: -91px -37px
+}
+.bp_mod_search .dropdown_menu {
+	font-weight: bold;
+	width: 77px
+}
+.bp_mod_search .dropdown_menu a, .bp_mod_search .dropdown_menu_bd a {
+	color: #282828;
+	font-size: 11px;
+	line-height: 20px
+}
+.bp_mod_search .dropdown_menu_hd {
+	background: url(http://image.buscape.com/bui-bp7/sprite-bullets.png) no-repeat 56px -59px;
+	color: #282828;
+	font-size: 11px;
+	cursor: pointer;
+	padding: 15px 10px 6px;
+	text-align: left
+}
+.bp_mod_search .dropdown_menu_bd {
+	background: #fff;
+	border-radius: 5px;
+	display: none;
+	padding: 5px 10px 10px 10px;
+	position: absolute;
+	z-index: 2
+}
+.bp_mod_search .dropdown_menu_bd li {
+	text-align: left
+}
+.bp_mod_search .dropdown_menu:hover .dropdown_menu_bd {
+	display: block
+}
+.bp_mod_news_optin .bd, .bp_mod_news_optin .bd .form {
+	background: url(http://image.buscape.com/bui-bp7/sprite-forms.png) no-repeat #e9e9e9
+}
+.bp_mod_news_optin .bd {
+	background-position: left -48px;
+	width: 200px
+}
+.bp_mod_news_optin .bd .form {
+	background-position: -113px -48px;
+	height: 30px;
+	margin-left: 10px;
+	padding-right: 10px
+}
+.bp_mod_news_optin input, .bp_mod_news_optin button {
+	border: 0;
+	font-size: 11px;
+	margin-top: 6px
+}
+.bp_mod_news_optin .ipt_text {
+	color: #282828;
+	margin-right: 5px;
+	width: 145px
+}
+.bp_mod_news_optin .ipt_submit {
+	background: 0;
+	text-indent: -9999px;
+	width: 27px
+}
+.bp_mod_user_rating {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat 10px -358px #e9e9e9;
+	font-size: 11px;
+	line-height: 12px
+}
+.bp_mod_user_rating a {
+	color: #858585
+}
+.bp_mod_user_rating .inner {
+	padding: 4px 10px 4px 35px
+}
+.bp_mod_user_rating .highlight {
+	color: #417ffd;
+	font-size: 12px;
+	font-weight: bold
+}
+html.no-borderradius .bp_mod_user_rating, html.no-borderradius .bp_mod_user_rating .inner {
+	background: url(http://image.buscape.com/bui-bp7/bg-mod-user-rating.png) no-repeat left -2px #e9e9e9
+}
+html.no-borderradius .bp_mod_user_rating .inner {
+	background-position: right -2px;
+	margin-left: 30px;
+	padding-left: 5px
+}
+.bp_mod_list_with_img {
+	text-align: center
+}
+.bp_mod_list_with_img a {
+	text-decoration: none
+}
+.bp_mod_list_with_img .list_with_img_inner {
+	display: block;
+	margin: 0 auto;
+	width: 110px
+}
+.bp_mod_list_with_img .item_img {
+	background: #e9e9e9;
+	overflow: hidden;
+	padding: 4px 0 1px;
+*padding-bottom:4px
+}
+.bp_mod_list_with_img a:hover .item_desc {
+	text-decoration: underline
+}
+.bp_mod_list_with_img .item_desc {
+	color: #417ffd;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 10px
+}
+.bp_mod_tooltip {
+	display: none;
+	font-size: 11px;
+	max-width: 200px;
+	position: absolute;
+	z-index: 1
+}
+.bp_mod_tooltip .inner {
+	background: #fefbf1;
+	border: 1px solid #fff6cc;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #dbd8d4;
+	color: #c78916;
+	margin-left: 10px;
+	padding: 15px 10px
+}
+.bp_mod_tooltip .pointer {
+	background: url(http://image.buscape.com/bui-bp7/bg-mod-tooltip.png) no-repeat left center;
+	display: block;
+	left: 0;
+	top: 40%;
+	position: absolute;
+	height: 18px;
+	width: 11px
+}
+.bp_mod_tabs {
+	padding-top: 10px
+}
+.bp_mod_tabs .tabs_inner {
+	background: #e3e3e3;
+	line-height: 30px;
+	padding: 0 10px
+}
+.bp_mod_tabs .unit .inner {
+	border-left: solid 1px #dcdcdc;
+	border-right: solid 1px #e8e8e8;
+	display: block
+}
+.bp_mod_tabs .first .inner, .bp_mod_tabs .active {
+	border: 0
+}
+.bp_mod_tabs a {
+	color: #858585!important;
+	padding: 0 13px 0 0;
+	line-height: normal
+}
+.bp_mod_tabs .active {
+	background: #fff;
+	font-weight: bold;
+	margin-top: -10px;
+	padding: 0
+}
+.bp_mod_tabs .active .inner {
+	border: solid 1px #ebebeb;
+	border-bottom-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: default;
+	height: 38px;
+	padding-top: 12px;
+	margin: 0;
+	text-decoration: none
+}
+html.no-borderradius .bp_mod_tabs .active, html.no-borderradius .bp_mod_tabs .active .inner {
+	background: url(http://image.buscape.com/bui-bp7/bg-tab-active-noradius.png) no-repeat #fff
+}
+html.no-borderradius .bp_mod_tabs .active {
+	padding-left: 5px
+}
+html.no-borderradius .bp_mod_tabs .active .inner {
+	background-position: right top;
+	border: 0;
+	border-bottom: solid 1px #fff;
+	padding-top: 13px
+}
+.bp_user_avatar {
+	background: #ebebeb;
+	height: 50px;
+	padding: 3px;
+	position: relative;
+	width: 50px
+}
+.bp_user_avatar.size100 {
+	height: 100px;
+	width: 100px
+}
+.bp_user_avatar .avatar_inner {
+	background: url(http://image.buscape.com/bui-bp7/img-default-avatar-50.gif) no-repeat center #fff;
+	display: block;
+	height: 100%
+}
+.bp_user_avatar .stamp_from {
+	height: 12px;
+	bottom: 5px;
+	position: absolute;
+	text-indent: -9999px;
+	width: 19px
+}
+.bp_user_avatar .stamp_from.ebit {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat 0 -987px;
+	height: 13px;
+	right: 5px;
+	width: 13px
+}
+.bp_user_avatar .stamp_from.flag {
+	left: 5px
+}
+.bp_usefull_info {
+	color: #757575;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 17px
+}
+.bp_usefull_info .hd {
+	padding-right: 10px
+}
+.bp_usefull_info a {
+	text-decoration: none
+}
+.bp_usefull_info .dislike a {
+	color: #8e0e0e
+}
+.bp_usefull_info .like a {
+	color: #360
+}
+.bp_usefull_info .btn {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	outline: 0;
+	text-indent: -9999px;
+	width: 13px
+}
+.bp_usefull_info .like .btn {
+	background-position: 0 -781px
+}
+.bp_usefull_info .like:hover .btn {
+	background-position: 0 -804px
+}
+.bp_usefull_info .like .active .btn {
+	background-position: 0 -804px
+}
+.bp_usefull_info .dislike .btn {
+	background-position: 0 -827px
+}
+.bp_usefull_info .dislike:hover .btn {
+	background-position: 0 -851px
+}
+.bp_usefull_info .dislike .active .btn {
+	background-position: 0 -851px
+}
+.bp_usefull_info .value {
+	padding: 0 10px 0 5px
+}
+.bp_delation {
+	font-size: 11px;
+	height: 15px;
+	width: auto
+}
+.bp_delation a {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat 0 -872px;
+	color: #757575;
+	padding-left: 15px;
+	text-decoration: underline
+}
+.bp_delation a:hover {
+	background-position: 0 -901px
+}
+.bp_delation .vote_feedback {
+	display: none
+}
+.bp_rate_this, .bp_rate_this a {
+	color: #417ffd
+}
+.bp_rate_this {
+	background: url(http://image.buscape.com/bui-bp7/sprite-icos.png) no-repeat 0 -945px;
+	font-size: 12px;
+	height: 12px;
+	line-height: 12px;
+	padding-left: 20px;
+	width: auto
+}
+.bp_btn_high_priority, .bp_btn_low_priority {
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	text-decoration: none!important;
+	color: #fff;
+	border: 0 none
+}
+.bp_btn_high_priority {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat left top;
+	color: #fff;
+	cursor: pointer;
+	margin: 0 auto;
+	max-width: 235px
+}
+.bp_btn_high_priority .inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat right top #fff;
+	cursor: pointer;
+	display: block;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn_high_priority input {
+	border: 0;
+	color: #fff;
+	text-align: center
+}
+.bp_btn_high_priority .compare {
+	font-size: 14px
+}
+.bp_btn_high_priority .compare .highlight {
+	font-size: 19px;
+	font-weight: bold
+}
+.bp_btn_high_priority .shop {
+	font-size: 16px;
+	font-weight: bold
+}
+.bp_btn_medium_priority {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat left -72px;
+	color: #785a01;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 auto;
+	max-width: 235px;
+	text-decoration: none!important;
+	text-transform: uppercase
+}
+.bp_btn_medium_priority .inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat right -72px #e9e9e9;
+	cursor: pointer;
+	display: block;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn_medium_priority .highlight {
+	font-size: 16px
+}
+.bp_btn_medium_priority input {
+	border: 0;
+	color: #785a01;
+	text-align: center
+}
+.bp_btn_medium_priority.big {
+	background-position: -130px -192px
+}
+.bp_btn_medium_priority.big .inner {
+	background-position: right -192px;
+	font-size: 13px;
+	font-weight: bold;
+	height: 36px;
+	line-height: 34px;
+	text-transform: none
+}
+.bp_btn_low_priority, .bp_btn_low_priority.disabled {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat left -112px #e9e9e9;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold
+}
+.bp_btn_low_priority .inner, .bp_btn_low_priority.disabled .inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat right -112px #e9e9e9;
+	cursor: pointer;
+	display: block;
+	height: 24px;
+	line-height: 22px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn_low_priority input {
+	border: 0;
+	color: #fff;
+	text-align: center
+}
+.bp_btn_low_priority.disabled {
+	opacity: .15;
+	filter: alpha(opacity = 15);
+	zoom: 1
+}
+.bp_btn_low_priority.big {
+	background-position: -130px -144px
+}
+.bp_btn_low_priority.big .inner {
+	background-position: right -144px;
+	font-size: 13px;
+	height: 36px;
+	line-height: 34px
+}
+.custom_select, .custom_select .inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-forms.png) no-repeat
+}
+.custom_select, .custom_select .inner, .custom_select select {
+	height: 24px;
+	min-width: 176px
+}
+.custom_select {
+	background-position: -850px -48px;
+	color: #282828;
+	cursor: default;
+	display: block;
+	font-size: 12px;
+	position: relative;
+	z-index: 2
+}
+.custom_select .inner {
+	background-position: right -48px;
+	margin-left: 5px
+}
+.custom_select select {
+	left: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	zoom: 1;
+	position: absolute;
+	width: 170px
+}
+.custom_select .selected {
+	line-height: 24px;
+	padding-left: 5px
+}
+.custom_select .dropdown {
+	position: absolute;
+	top: 23px;
+	left: 1px;
+	background: #fff
+}
+.custom_select .dropdown .inner {
+	background: #fff;
+	border: 1px solid #cecece;
+	height: auto;
+	margin-left: 0
+}
+.custom_select .dropdown .item {
+	display: block!important;
+	padding-left: 5px
+}
+.custom_select .dropdown a {
+	display: block
+}
+.custom_select .dropdown .item:hover, .custom_select .dropdown .selected {
+	background-color: #e3e3e3
+}
+.bp_price_history {
+	width: 500px
+}
+.bp_price_history #price_history_container {
+	width: 480px;
+	height: 200px
+}
+.bp_price_history .hd {
+	color: #757575;
+	font-size: 14px;
+	font-weight: bold
+}
+.bp_price_history .bd {
+	padding: 10px
+}
+.speech_bubble_pointer {
+	position: relative;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border: 10px solid;
+	border-color: #fff #e9e9e9 #fff #fff;
+	float: left;
+	left: 0;
+	top: 10px
+}
+.bp_mod_without_results {
+	font-size: 16px;
+	color: #282828;
+	text-align: center;
+	margin: 60px 0
+}
+.bp_mod_without_results a {
+	color: #417ffd;
+	font-weight: bold
+}
+.bp_thead_rounded .thead_rounded_inner {
+	background: #e9e9e9;
+	padding: 10px 0;
+	position: relative
+}
+.bp_thead_rounded .tl_corner, .bp_thead_rounded .tr_corner, .bp_thead_rounded .bl_corner, .bp_thead_rounded .br_corner {
+	background: url(http://image.buscape.com/bui-bp7/bg-rounded-corner-10.png) no-repeat;
+	display: block;
+	height: 10px;
+	position: absolute;
+	width: 10px
+}
+.bp_thead_rounded .tl_corner {
+	background-position: left top;
+	left: 0;
+	top: 0
+}
+.bp_thead_rounded .tr_corner {
+	background-position: right top;
+	right: 0;
+	top: 0
+}
+.bp_thead_rounded .bl_corner {
+	background-position: left bottom;
+	left: 0;
+	bottom: 0
+}
+.bp_thead_rounded .br_corner {
+	background-position: right bottom;
+	right: 0;
+	bottom: 0
+}
+.bp_lightbox {
+	font: 12px Arial, Helvetica, sans-serif
+}
+.bp_lightbox a {
+	color: #417ffd
+}
+.bp_lightbox #bp_page_title {
+	color: #282828;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 23px;
+	padding-bottom: 15px;
+	text-transform: uppercase
+}
+.bp_lightbox #bp_page_title .info_title {
+	display: block;
+	font-size: 10px;
+	line-height: 10px
+}
+.bp_lightbox .sidebar_info {
+	background: #e9e9e9;
+	color: #5a5a5a;
+	text-align: center
+}
+.bp_lightbox .sidebar_info .sidebar_inner {
+	padding: 20px
+}
+.bp_lightbox .sidebar_info .ft {
+	padding-top: 15px
+}
+.bp_lightbox .main .main_inner {
+	color: #757575;
+	padding: 30px 30px 0 30px
+}
+.bp_lightbox .main .topics_list {
+	padding-bottom: 20px
+}
+.bp_lightbox .main .topics_list .highlight {
+	color: #282828;
+	font-weight: bold;
+	padding-bottom: 3px
+}
+.bp_lightbox .main .obs {
+	font-size: 11px
+}
+.bp_lightbox .scrollable_content {
+	height: 260px;
+	margin: 10px 0;
+	overflow-y: auto
+}
+.bp_lightbox .scrollable_content p {
+	margin-bottom: 15px
+}
+.bp_steps .step {
+	background: url(http://image.buscape.com/bui-bp7/sprite-steps.png) no-repeat;
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	margin-right: 10px;
+	text-align: center;
+	text-indent: -9999px;
+	width: 42px
+}
+.bp_steps .step.item01 {
+	background-position: 0 0
+}
+.bp_steps .step.item02 {
+	background-position: 0 -71px
+}
+.bp_steps .step.item03 {
+	background-position: 0 -142px
+}
+.bp_steps .step.item04 {
+	background-position: 0 -213px
+}
+.bp_steps .step.item05 {
+	background-position: 0 -284px
+}
+.bp_steps .step.item06 {
+	background-position: 0 -355px
+}
+.bp_steps .step.item07 {
+	background-position: 0 -426px
+}
+.bp_steps .step.item08 {
+	background-position: 0 -497px
+}
+.bp_steps .step.item09 {
+	background-position: 0 -568px
+}
+.bp_steps .step.item10 {
+	background-position: 0 -639px
+}
+.bp_no_results .no_results_inner {
+	background: url(http://image.buscape.com/bui-bp7/bg-no-results.png) 50px 5px no-repeat;
+	padding: 10px 0 10px 170px
+}
+.bp_no_results .speech_bubble_pointer {
+	top: 30px
+}
+.bp_no_results .main_simple_heading {
+	padding: 30px 0;
+	text-align: center
+}
+.bp_no_results .main_simple_heading .text {
+	float: none;
+	font-size: 16px
+}
+#filtrosConteiner {
+	float: left;
+	width: 210px;
+	float: left;
+	margin: 0 10px 0 0;
+	width: 222px
+}
+#filtrosConteiner .filtrosBox {
+	background: #e9e9e9;
+	border-radius: 5px;
+	color: #757575;
+	font-size: 11px;
+	padding: 20px 5px 12px;
+	margin: 0 0 10px 0;
+	float: left;
+	width: 210px
+}
+#filtrosConteiner .filtrosBox .filtrosConteudo {
+	float: Left;
+	display: none
+}
+#filtrosConteiner .filtrosBox .boxAux {
+	background: none repeat scroll 0 0 #fefbf1;
+	border: 1px solid #fff6cc;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0 0 5px #dbd8d4;
+	color: #c78916;
+	margin-left: 10px;
+	padding: 15px 10px;
+	float: left;
+	width: 200px;
+	position: absolute;
+	display: none
+}
+#filtrosConteiner .filtrosBox .boxAux p {
+	float: left;
+	padding: 0 5px;
+	width: 169px
+}
+#filtrosConteiner .filtrosBox .boxAux .pointer {
+	background: url("http://image.buscape.com/bui-bp7/bg-mod-tooltip.png") repeat scroll 0 0 transparent;
+	float: left;
+	height: 18px;
+	left: -21px;
+	position: relative;
+	top: 38%;
+	width: 11px
+}
+#filtrosConteiner .filtrosBox a {
+	color: #757575
+}
+#filtrosConteiner .filtrosBox h2 {
+	color: #282828;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 20px 0 8px;
+	margin: 0 0 10px 0;
+	position: relative;
+	z-index: 1
+}
+#filtrosConteiner .filtrosBox h2 .filtrosToggle {
+	background: url("http://image.buscape.com/bui-bp7/sprite-bullets.png") no-repeat scroll -69px -20px;
+	height: 11px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 11px;
+	position: absolute;
+	right: 11px;
+	top: 0;
+	cursor: pointer
+}
+#filtrosConteiner .filtrosBox h2 .filtrosToggle a {
+	width: 20px;
+	height: 20px;
+	display: block
+}
+#filtrosConteiner .active .filtrosConteudo {
+	display: block
+}
+#filtrosConteiner .active h2 .filtrosToggle {
+	background: url("http://image.buscape.com/bui-bp7/sprite-bullets.png") no-repeat scroll -89px 0 transparent!important
+}
+#filtrosConteiner .filtrosBox h2 .icoAjuda {
+	background: url("http://image.buscape.com/bui-bp7/sprite-icos.png") no-repeat scroll 0 -322px transparent;
+	float: right;
+	height: 12px;
+	margin: 0 2px 0 0;
+	overflow: hidden;
+	position: absolute;
+	right: 19px;
+	text-indent: -9999px;
+	top: 0;
+	width: 18px;
+	z-index: 3
+}
+#filtrosConteiner .filtrosBox h2 .icoAjuda a {
+	width: 12px;
+	height: 12px;
+	display: block
+}
+#filtrosConteiner .filtrosBox h2 .icoEbit {
+	background: url("http://image.buscape.com/bui-bp7/sprite-logos.png") no-repeat scroll 0 0 transparent;
+	float: right;
+	height: 20px;
+	overflow: hidden;
+	padding: 0 16px 0 0;
+	position: absolute;
+	right: 32px;
+	text-indent: -9999px;
+	top: -6px;
+	width: 25px
+}
+#filtrosConteiner .filtrosBox h2 .icoEbit a {
+	display: block;
+	width: 40px;
+	height: 21px
+}
+#filtrosConteiner .filtrosBox fieldset label {
+	float: Left
+}
+#filtrosConteiner .filtrosBox .itemSelecionado {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: url("http://image.buscape.com/bui-bp7/sprite-bullets.png") no-repeat scroll -5px -124px #c3c3c3;
+	border-radius: 10px 10px 10px 10px;
+	color: #757575;
+	float: left;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	padding: 4px 0 4px 22px;
+	width: 170px;
+	display: inline-block
+}
+#filtrosConteiner .filtrosBox .scroolControl {
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden
+}
+#filtrosConteiner .filtrosBox p {
+	padding: 0 10px 10px
+}
+#filtrosConteiner .filtrosBox .listaAvaliacao {
+	margin: 0 auto;
+	padding: 0;
+	width: 132px
+}
+#filtrosConteiner .filtrosBox .listaAvaliacao li {
+	float: left;
+	text-align: center;
+	width: 28px
+}
+#filtrosConteiner .filtrosBox .listaAvaliacao li a {
+	background: url("http://image.buscape.com/bui-bp7/sprite-rating-stars.png") no-repeat scroll 3px -39px transparent;
+	width: 28px;
+	padding: 23px 0 0 0;
+	float: Left
+}
+#filtrosConteiner .filtrosBox .listaAvaliacao li a:hover {
+	background: url("http://image.buscape.com/bui-bp7/sprite-rating-stars.png") no-repeat scroll 3px 1px transparent;
+	width: 28px;
+	float: Left;
+	padding: 23px 0 0 0;
+	text-decoration: none
+}
+#filtrosConteiner .filtrosBox .mod-filter-rating {
+	background: url(http://image.buscape.com/bui-bp7/sprite-rating-stars.png) repeat-x 0 -40px;
+	width: 22px;
+	height: 13px;
+	display: block;
+	float: left;
+	padding: 25px 4px 0 0;
+	font-family: Arial;
+	font-size: 11px;
+	text-align: center;
+	color: #757575;
+	cursor: pointer
+}
+#filtrosConteiner .filtrosBox .bp-rating-over {
+	background-position: 0 0
+}
+#filtrosConteiner .filtrosBox .boxPalavraChave {
+	padding: 0 0 0 8px;
+	width: 200px
+}
+#filtrosConteiner .filtrosBox .boxPalavraChave .txtInput {
+	background: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 180px;
+	padding: 2px
+}
+#filtrosConteiner .filtrosBox .boxPalavraChave .txtInput input {
+	background: none repeat scroll 0 0 #fff;
+	color: #757575;
+	border: 0;
+	font-size: 14px;
+	margin: 0 0 0 8px;
+	padding: 0;
+	width: 164px
+}
+#filtrosConteiner .filtrosBox .boxPalavraChave .btEnviar {
+	float: right;
+	margin: 10px 0 0 0
+}
+#filtrosConteiner .filtrosBox .boxPalavraChave .btEnviar button {
+	background: url("http://image.buscape.com/bui-bp7/sprite-buttons.png") no-repeat scroll -294px -37px transparent;
+	height: 26px;
+	width: 59px;
+	border: 0
+}
+#filtrosConteiner .filtrosBox .listaVarPreco {
+	float: left;
+	padding: 0 0 0 9px;
+	width: 193px;
+	border-bottom: 1px dotted #d9d9d9;
+	margin: 0 0 10px
+}
+#filtrosConteiner .filtrosBox .listaVarPreco li {
+	margin: 0 0 10px 0;
+	color: #5a5a5a;
+	float: left;
+	width: 100%
+}
+#filtrosConteiner .filtrosBox .listaVarPreco .itemSelecionado {
+	width: 154px
+}
+#filtrosConteiner .filtrosBox .listaVarPreco li strong {
+	color: #757575;
+	font-weight: normal;
+	padding: 0 0 0 4px
+}
+.boxSlider {
+	float: left;
+	width: 203px;
+	font-size: 11px
+}
+.boxSlider #slider {
+	margin: 0 0 17px 13px
+}
+.boxSlider fieldset {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0
+}
+.boxSlider fieldset label {
+	float: left;
+	background: #fff;
+	border-radius: 10px;
+	width: 64px
+}
+.boxSlider fieldset span {
+	float: left;
+	padding: 0 5px
+}
+.boxSlider fieldset label input {
+	float: left;
+	background: 0;
+	border: 0;
+	width: 61px;
+	text-align: center;
+	font-size: 11px
+}
+.boxSlider fieldset .btEnviar {
+	background: url("http://image.buscape.com/bui-bp7/sprite-buttons.png") no-repeat scroll -294px -37px transparent;
+	border: 0 solid;
+	float: right!important;
+	height: 24px;
+	width: 56px;
+	margin: 17px 0 0
+}
+.boxSlider fieldset .btEnviar input {
+	background: 0;
+	border: 0 solid;
+	height: 24px;
+	width: 56px;
+	cursor: pointer
+}
+.ui-widget-content {
+	background: url(http://image.buscape.com/bui-bp7/sprite-slicer-cross.png) 0 -32px no-repeat
+}
+.ui-widget-header {
+	background: url(http://image.buscape.com/bui-bp7/sprite-slicer-cross.png) 0 0 no-repeat
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: url(http://image.buscape.com/bui-bp7/sprite-slicer-cross.png) no-repeat
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	background: url(http://image.buscape.com/bui-bp7/sprite-slicer-cross.png) 0 px no-repeat
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+	width: 170px
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 14px;
+	height: 18px;
+	cursor: default
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background: 0
+}
+.ui-slider-horizontal {
+	height: 9px;
+	margin: 0 0 10px 0
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0
+}
+.ui-slider-vertical {
+	width: 170px;
+	height: 100px
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0
+}
+#filtrosConteiner .filtrosBox .boxValores {
+	float: left;
+	padding: 24px 0 9px 6px;
+	width: 190px
+}
+#filtrosConteiner .filtrosBox .boxValores fieldset label {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: none repeat scroll 0 0 #fff;
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 5px 0 4px;
+	padding: 2px;
+	width: 61px
+}
+#filtrosConteiner .filtrosBox .boxValores span {
+	float: Left;
+	padding: 2px 0 0
+}
+#filtrosConteiner .filtrosBox .boxValores input {
+	float: Left;
+	width: 64px;
+	border: 0;
+	background: 0;
+	text-align: center
+}
+#filtrosConteiner .filtrosBox .listaLoja {
+	padding: 5px 0 0 7px
+}
+#filtrosConteiner .filtrosBox .listaLoja li {
+	background: url("http://imagem.buscape.com.br/parceiros/skin40_default/sprite-icos-ebit.png") no-repeat;
+	color: #5a5a5a;
+	float: left;
+	padding: 0 0 13px 0;
+	width: 100%;
+*width:200px;
+*display:block
+}
+#filtrosConteiner .filtrosBox .listaLoja .itemSelecionado {
+	background: url("http://image.buscape.com/bui-bp7/sprite-bullets.png") no-repeat scroll -5px -124px #c3c3c3;
+	margin: 0 0 10px;
+	padding: 4px 0 6px 21px;
+	width: 154px
+}
+#filtrosConteiner .filtrosBox .listaLoja .ebit_40 {
+	background-position: 179px 0
+}
+#filtrosConteiner .filtrosBox .listaLoja .ebit_30 {
+	background-position: 179px -47px
+}
+#filtrosConteiner .filtrosBox .listaLoja .ebit_20 {
+	background-position: 179px -93px
+}
+#filtrosConteiner .filtrosBox .listaLoja .ebit_10 {
+	background-position: 179px -141px
+}
+#filtrosConteiner .filtrosBox .listaLoja .txtPagDigital {
+	background-position: 179px -233px;
+	color: #5aa132
+}
+#filtrosConteiner .filtrosBox .listaLoja .txtPagDigital a {
+	color: #5aa132
+}
+#filtrosConteiner .filtrosBox .listaLoja .bgNulo {
+	background: 0
+}
+#filtrosConteiner .filtrosBox .listaLoja li strong {
+	color: #757575;
+	font-weight: normal;
+	padding: 0 0 0 4px
+}
+#filtrosConteiner .filtrosBox .listaLocal {
+	height: auto;
+	width: 193px
+}
+#filtrosConteiner .filtrosBox .listaLocal ul {
+	height: 200px;
+	line-height: 20px;
+	overflow: auto;
+	width: 194px;
+	margin-left: 8px
+}
+#filtrosConteiner .filtrosBox .listaGenerico ul {
+	height: 200px;
+	overflow: auto;
+	width: 194px;
+	margin-left: 8px
+}
+#filtrosConteiner .filtrosBox .listaItem {
+	background: url("http://image.buscape.com/bui-bp7/sprite-bullets.png") no-repeat scroll -44px -34px transparent;
+	border-radius: 15px 15px 15px 15px;
+	font-size: 11px;
+	margin: 0 0 10px -2px;
+	padding: 5px 0 0 20px;
+	line-height: 14px
+}
+#filtrosConteiner .filtrosBox .listaItem a:hover {
+	text-decoration: none
+}
+#filtrosConteiner .filtrosBox small {
+	color: #757575
+}
+#filtrosConteiner .multiValor ul, #filtrosConteiner .multiSelecao ul, #filtrosConteiner .valorUnico ul {
+	overflow: auto;
+	margin-left: 8px
+}
+#filtrosConteiner .multiValor ul li, #filtrosConteiner .multiSelecao ul li, #filtrosConteiner .valorUnico ul li {
+	padding-bottom: 10px
+}
+#filtrosConteiner .boxGenerico .itemSelecionado {
+	float: none;
+	margin: 0 0 10px 0
+}
+#filtrosConteiner .listaGenerico .itemSelecionado {
+	float: none;
+	margin: 0 0 10px 0;
+	width: 153px
+}
+#filtrosConteiner .boxOnline .listaItem {
+	clear: both
+}
+#nyroModalFull .wrapper, #nyroModalFull .wrapperAjax {
+	background: #fff;
+	border-radius: 14px
+}
+#nyroModalContent {
+	overflow: hidden
+}
+#nyroModalFull .wrapper {
+	padding: 20px;
+	position: relative
+}
+#nyroModalWrapper {
+	background-image: url(http://image.buscape.com/bui-bp7/lightbox/lightbox_inner.png)
+}
+#nyroModalFull .tl, #nyroModalFull .bl, #nyroModalFull .br, #nyroModalFull .lightbox_close_button {
+	background: transparent url(http://image.buscape.com/bui-bp7/lightbox/lightbox_borders.png) repeat;
+	border: 0;
+	height: 15px;
+	position: absolute;
+	width: 15px
+}
+#nyroModalFull .t, #nyroModalFull .b, #nyroModalFull .l, #nyroModalFull .r {
+	background-image: url(http://image.buscape.com/bui-bp7/lightbox/lightbox_inner.png);
+	position: absolute
+}
+#nyroModalFull .t {
+	width: 100%;
+	height: 15px;
+	top: -15px;
+	left: 0
+}
+#nyroModalFull .b {
+	width: 100%;
+	height: 15px;
+	bottom: -15px;
+	left: 0
+}
+#nyroModalFull .l {
+	width: 15px;
+	height: 100%;
+	top: 0;
+	left: -15px
+}
+#nyroModalFull .r {
+	width: 15px;
+	height: 100%;
+	top: 0;
+	right: -15px
+}
+#nyroModalFull .tl {
+	background-position: 0 -11px;
+	top: -15px;
+	left: -15px
+}
+#nyroModalFull .bl {
+	background-position: 0 -26px;
+	bottom: -15px;
+	left: -15px
+}
+#nyroModalFull .br {
+	background-position: -15px -26px;
+	bottom: -15px;
+	right: -15px
+}
+#nyroModalFull .lightbox_close_button {
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	top: -27px;
+	right: -30px;
+	background-position: -45px -41px;
+	text-indent: -9999em;
+	outline-width: 0;
+	display: block
+}
+#nyroModalFull .lightbox_text {
+	text-align: center;
+	margin-bottom: 15px
+}
+#nyroModalFull #nyroModalLoading {
+	margin-top: 0!important;
+	margin-left: 0!important
+}
+#nyroModalFull .user_button {
+	margin: 28px auto 0;
+	display: block
+}
+#nyroModalFull .user_button .inner {
+	background-color: #fff
+}
+#nyroModalFull .user_button.nyroModalClose {
+	width: 70px
+}
+#nyroModalFull .lightbox_text.confirm .line {
+	margin: 0 auto;
+	width: 75%
+}
+#nyroModalFull .ok_button {
+	max-width: 60px;
+	width: 60px
+}
+#nyroModalFull .cancel_button {
+	margin-left: 20px;
+	max-width: 100px
+}
+.ui-widget-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+.ui-widget-overlay {
+	background: #666 url(http://image.buscape.com/bui-bp7/lightbox/lightbox_overlay.png) 50% 50% repeat!important;
+	opacity: .50;
+	filter: Alpha(Opacity=50)
+}
+.ui-dialog {
+	position: fixed!important;
+	padding: 12px!important;
+*padding:16px!important;
+	width: auto!important
+}
+.lightbox_alpha_border {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	display: none
+}
+.lightbox_alpha_border tr {
+	padding: 0;
+	margin: 0;
+	height: 13px;
+	border-collapse: collapse
+}
+.ui-dialog .lightbox_alpha_border {
+	display: block!important;
+	height: auto!important;
+	padding: 20px!important
+}
+.lightbox_border_path, .lightbox_inner {
+	background: transparent url(http://image.buscape.com/bui-bp7/lightbox/lightbox_inner.png) repeat
+}
+.lightbox_border_top_right {
+	position: relative
+}
+.lightbox_border_top_left, .lightbox_close_button, .lightbox_border_bottom_left, .lightbox_border_bottom_right {
+	height: 15px;
+	background: transparent url(http://image.buscape.com/bui-bp7/lightbox/lightbox_borders.png) repeat
+}
+.lightbox_border_top_left {
+	background-position: 0 -11px
+}
+.lightbox_close_button {
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	top: -27px;
+	right: -30px;
+	background-position: -45px -41px;
+	text-indent: -9999em;
+	outline-width: 0;
+	display: block
+}
+.lightbox_border_bottom_left {
+	background-position: 0 -26px
+}
+.lightbox_border_bottom_right {
+	background-position: -15px -26px
+}
+.lightbox_border_side {
+	width: 15px
+}
+.lightbox_content {
+	background-color: #fff!important;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
+	width: 100%;
+	min-height: 50px!important;
+	overflow: hidden!important
+}
+.lightbox_content.loading {
+	background: url(http://image.buscape.com/bui-bp7/loading-100x100.gif) center center no-repeat;
+	height: 250px
+}
+.lightbox_alert {
+	min-height: 80px;
+	padding: 25px;
+	text-align: center
+}
+.lightbox_alert .bp_btn.yellow {
+	margin: 28px auto 0;
+	display: block;
+	float: none;
+	width: 50px
+}
+.lightbox_alert_msg {
+	display: block
+}
+.lightbox_alert .bp_btn.yellow .inner {
+	background-color: #fff
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: .4em 1em;
+	position: relative
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 16px .1em 0
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 19px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 18px
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+	display: block;
+	margin: 1px
+}
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+	padding: 0
+}
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none!important;
+	overflow: auto!important;
+	zoom: 1
+}
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none!important;
+	margin: .5em 0 0 0;
+	padding: .3em 1em .5em .4em
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: right
+}
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: .5em .4em .5em 0;
+	cursor: pointer
+}
+.ui-dialog .ui-resizable-se {
+	width: 14px;
+	height: 14px;
+	right: 3px;
+	bottom: 3px
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move
+}
+.ui-dialog-titlebar {
+	display: none!important
+}
+.ui-widget-content {
+	border: 0 none!important
+}
+.bp_btn {
+	background: url(http://image.buscape.com/bui-bp7/sprite-buttons.png) no-repeat;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	text-decoration: none!important;
+	border: 0 none
+}
+.bp_btn .inner {
+	background-color: #fff;
+	background-image: url(http://image.buscape.com/bui-bp7/sprite-buttons.png);
+	cursor: pointer;
+	display: block;
+	text-decoration: none!important
+}
+.bp_btn input {
+	border: 0;
+	text-align: center
+}
+.bp_btn.red {
+	background-position: left top;
+	color: #fff;
+	margin: 0 auto;
+	max-width: 235px
+}
+.bp_btn.red .inner {
+	background-position: right top;
+	cursor: pointer;
+	display: block;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn.red input {
+	color: #fff
+}
+.bp_btn.red .compare {
+	font-size: 14px
+}
+.bp_btn.red .compare .highlight, .bp_btn.red .compare strong {
+	font-size: 19px;
+	font-weight: bold
+}
+.bp_btn.red .shop {
+	font-size: 16px;
+	font-weight: bold
+}
+.bp_btn.red.small {
+	background-position: 0 -362px
+}
+.bp_btn.red.small .inner {
+	background-position: right -362px;
+	font-size: 11px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 10px;
+	padding-left: 4px;
+	text-align: center
+}
+.bp_btn.yellow {
+	background-position: left -72px;
+	color: #785a01!important;
+	font-size: 11px;
+	font-weight: bold;
+	max-width: 235px
+}
+.bp_btn.yellow .inner {
+	background-position: right -72px;
+	background-color: #fff;
+	color: #785a01!important;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn.yellow .highlight {
+	font-size: 16px
+}
+.bp_btn.yellow input {
+	color: #785a01
+}
+.bp_btn.yellow.big {
+	background-position: -130px -192px
+}
+.bp_btn.yellow.big .inner {
+	background-position: right -192px;
+	font-size: 13px;
+	font-weight: bold;
+	height: 36px;
+	line-height: 34px;
+	text-transform: none
+}
+.bp_btn.yellow.small {
+	background-position: -231px -287px
+}
+.bp_btn.yellow.small .inner {
+	background-color: #fff;
+	background-position: -231px -287px;
+	font-size: 11px;
+	height: 23px;
+	line-height: 23px;
+	margin-left: 0;
+	padding-left: 4px;
+	text-align: center;
+	width: 109px
+}
+.bp_btn.gray {
+	background-position: left -112px;
+	background-color: #fff;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold
+}
+.bp_btn.gray .inner {
+	background-position: right -112px;
+	background-color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 24px;
+	line-height: 22px;
+	margin-left: 15px;
+	padding: 0 15px 0 0
+}
+.bp_btn.gray input {
+	color: #fff
+}
+.bp_btn.gray.big {
+	background-position: -130px -144px
+}
+.bp_btn.gray.big .inner {
+	background-position: right -144px;
+	font-size: 13px;
+	height: 36px;
+	line-height: 34px
+}
+.bp_btn.gray.new {
+	background: #646464;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	height: 25px;
+	line-height: 25px
+}
+.bp_btn.gray.new:hover {
+	background: #282828
+}
+.bp_btn.disabled {
+	opacity: .15;
+	filter: alpha(opacity=15);
+	zoom: 1
+}
+.bp_mod_restricted_category {
+	background: #e9e9e9;
+	color: #8f8f8f;
+	padding: 40px 40px 10px;
+	margin: 40px auto;
+	text-align: center;
+	width: 80%
+}
+.bp_mod_restricted_category div {
+	margin-bottom: 20px
+}
+.bp_mod_restricted_category .hd {
+	color: #282828;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase
+}
+.bp_mod_restricted_category .bd {
+	text-align: left
+}
+.bp_mod_restricted_category .bd p {
+	margin-bottom: 10px
+}
+.bp_mod_restricted_category a {
+	color: #417ffd
+}
+.bp_pagination {
+	background: url(http://image.buscape.com/bui-bp7/sprite-pagination.png) no-repeat left 3px;
+	margin: 20px auto;
+	max-width: 1242px
+}
+.bp_pagination .pagination_inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-pagination.png) no-repeat right 3px #fff;
+	height: 43px;
+	line-height: 43px;
+	margin-left: 15px;
+	text-align: center
+}
+.bp_pagination .next, .bp_pagination .previous {
+	float: left;
+	padding-top: 9px;
+	width: 100px;
+	margin-left: -8px
+}
+.bp_pagination .next {
+	float: right;
+	margin-right: -4px;
+	padding-right: 10px
+}
+.bp_pagination .bp_btn.gray, .bp_pagination .bp_btn .inner {
+	background-color: #e9e9e9
+}
+.bp_pagination .main {
+	width: auto;
+	margin: 0 auto;
+	display: block
+}
+.bp_pagination .pages_list {
+	color: #757575;
+	font-size: 14px;
+	font-weight: bold
+}
+.bp_pagination .pages_list a {
+	color: #757575
+}
+.bp_pagination .pages_list li {
+	display: inline;
+	margin: 0 10px
+}
+.bp_pagination .pages_list .current {
+	margin: 0 10px
+}
+.bp_pagination .pages_list .current .inner {
+	background: url(http://image.buscape.com/bui-bp7/sprite-pagination.png) no-repeat left -57px;
+	color: #fff;
+	display: inline-block;
+	width: 43px
+}
+
+
+/*
  * azul marinho: #28313b
  * azul marinho 90%: #3e454e
  * azul claro: #6896cf
