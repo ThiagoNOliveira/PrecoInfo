@@ -22,7 +22,7 @@
                 string classe = "span4 categ-pai cat" + i;
 
                     @:<div class="@classe">  
-                    @:<a href="http://tcc.gustavobrandao.com.br/precoinfo/pesquisa-de-precos/computador" rel="bookmark">
+                    @:<a href="Resultados?id=@categoria.Id" rel="bookmark">
                 @:<img src="@categoria.NomeImagem"><br/>@categoria.Nome</a><br/>
 
                 foreach (PrecoInfo.Domain.ComponenteProduto.Categoria subCategoria in @categoria.SubCategorias)
