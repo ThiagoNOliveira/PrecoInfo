@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using PrecoInfo.Domain.ComponenteUsuario.ComponenteEndereco;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +13,54 @@ namespace PrecoInfo.Mappings.Usuario.Endereco
         public EnderecoMap()
         {
             Id(x => x.Id);
-            Map(x => x.Bairro);
             Map(x => x.Cep);
-            Map(x => x.Cidade);
             Map(x => x.Complemento);
             Map(x => x.Logradouro);
             Map(x => x.Numero);
-            Map(x => x.UF);
+            References(x => x.Estado);
+            References(x => x.Cidade);
+            References(x => x.Zona);
+            References(x => x.Bairro);
 
+        }
+    }
+
+    public class EstadoMap : ClassMap<Estado>
+    {
+        public EstadoMap()
+        {
+            Id(x => x.Id);
+            Map(x => x.UF);
+            HasMany(x => x.Cidades).Cascade.AllDeleteOrphan();
+        }
+    }
+
+    public class CidadeMap : ClassMap<Cidade>
+    {
+        public CidadeMap()
+        {
+            Id(x => x.Id);
+            Map(x => x.Nome);
+            HasMany(x => x.Zonas).Cascade.AllDeleteOrphan();
+        }
+    }
+
+    public class ZonaMap : ClassMap<Zona>
+    {
+        public ZonaMap()
+        {
+            Id(x => x.Id);
+            Map(x => x.Nome);
+            HasMany(x => x.Bairros).Cascade.AllDeleteOrphan();
+        }
+    }
+
+    public class BairroMap : ClassMap<Bairro>
+    {
+        public BairroMap()
+        {
+            Id(x => x.Id);
+            Map(x => x.Nome);
         }
     }
 }

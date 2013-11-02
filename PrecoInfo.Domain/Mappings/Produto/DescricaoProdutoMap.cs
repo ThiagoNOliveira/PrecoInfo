@@ -15,6 +15,7 @@ namespace PrecoInfo.Mappings.Produto
             Id(x => x.Id);
             Map(x => x.Nome);
             Map(x => x.Especificacao);
+            References(x => x.Categoria);
             References(x => x.Marca);
         }
     }

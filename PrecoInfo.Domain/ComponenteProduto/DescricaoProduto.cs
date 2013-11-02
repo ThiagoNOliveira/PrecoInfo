@@ -9,6 +9,7 @@ namespace PrecoInfo.Domain.ComponenteProduto
     public class DescricaoProduto
     {
         public virtual Guid Id { get; set; }
+        public virtual Categoria Categoria { get; set; }
         public virtual string Nome { get; set; }
         public virtual string Especificacao { get; set; }
         public virtual Marca Marca { get; set; }
