@@ -31,6 +31,11 @@ namespace PrecoInfo.Core.Domain.Repository
         {
             Session.SaveOrUpdate(root);
         }
+        public virtual void SalvarEAtualizarSession(IAggregateRoot<Guid> root)
+        {
+            Session.SaveOrUpdate(root);
+            Session.Flush();
+        }
 
         public virtual void SalvarLista(List<IAggregateRoot<Guid>> roots)
         {

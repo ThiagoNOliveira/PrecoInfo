@@ -15,6 +15,7 @@ namespace PrecoInfo.Mappings.Produto
             Id(x => x.Id);
             Map(x => x.Nome);
             Map(x => x.NomeImagem);
+            Map(x => x.Ordem);
             HasMany(x => x.SubCategorias).Cascade.AllDeleteOrphan();
         }
     }

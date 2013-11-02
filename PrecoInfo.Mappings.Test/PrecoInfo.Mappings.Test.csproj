@@ -48,9 +48,6 @@
     <Reference Include="nunit.framework">
       <HintPath>..\Library\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="PrecoInfo.InfraStructure">
-      <HintPath>..\Library\PrecoInfo.InfraStructure.dll</HintPath>
-    </Reference>
     <Reference Include="Rhino.Mocks">
       <HintPath>..\Library\Rhino.Mocks.dll</HintPath>
     </Reference>
@@ -63,11 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CriacaoDoBanco.cs" />
+    <Compile Include="CargaInicialDoSistemaTest.cs" />
+    <Compile Include="CriacaoDoBancoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrecoInfo.Domain\PrecoInfo.Domain.csproj">
+      <Project>{cdfa91e3-bbaa-4603-a878-1428d5943787}</Project>
+      <Name>PrecoInfo.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

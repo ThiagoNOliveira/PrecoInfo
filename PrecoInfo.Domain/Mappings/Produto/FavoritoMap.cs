@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace PrecoInfo.Mappings.Produto
 {
-    public class CategoriaMap : ClassMap<Categoria>
+    public class FavoritoMap : ClassMap<Favorito>
     {
-        public CategoriaMap()
+        public FavoritoMap()
         {
             Id(x => x.Id);
-            Map(x => x.Nome);
-            Map(x => x.NomeImagem);
-            HasMany(x => x.SubCategorias).Cascade.AllDeleteOrphan();
+            References(x => x.Usuario);
+            References(x => x.Produto);
         }
     }
 }
